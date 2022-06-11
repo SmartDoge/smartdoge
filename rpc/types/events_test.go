@@ -4,10 +4,10 @@ import (
 	"math/big"
 	"testing"
 
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 func TestParseTxResult(t *testing.T) {
@@ -51,7 +51,7 @@ func TestParseTxResult(t *testing.T) {
 						{Key: []byte(evmtypes.AttributeKeyTxLog), Value: rawLogs[2]},
 					}},
 					{Type: "message", Attributes: []abci.EventAttribute{
-						{Key: []byte("action"), Value: []byte("/ethermint.evm.v1.MsgEthereumTx")},
+						{Key: []byte("action"), Value: []byte("/smartdoge.evm.v1.MsgEthereumTx")},
 						{Key: []byte("key"), Value: []byte("ethm17xpfvakm2amg962yls6f84z3kell8c5lthdzgl")},
 						{Key: []byte("module"), Value: []byte("evm")},
 						{Key: []byte("sender"), Value: []byte(address)},
@@ -115,7 +115,7 @@ func TestParseTxResult(t *testing.T) {
 						{Key: []byte(evmtypes.AttributeKeyTxLog), Value: rawLogs[2]},
 					}},
 					{Type: "message", Attributes: []abci.EventAttribute{
-						{Key: []byte("action"), Value: []byte("/ethermint.evm.v1.MsgEthereumTx")},
+						{Key: []byte("action"), Value: []byte("/smartdoge.evm.v1.MsgEthereumTx")},
 						{Key: []byte("key"), Value: []byte("ethm17xpfvakm2amg962yls6f84z3kell8c5lthdzgl")},
 						{Key: []byte("module"), Value: []byte("evm")},
 						{Key: []byte("sender"), Value: []byte(address)},
@@ -291,7 +291,7 @@ func TestParseTxLogs(t *testing.T) {
 				{Key: []byte(evmtypes.AttributeKeyTxLog), Value: rawLogs[2]},
 			}},
 			{Type: "message", Attributes: []abci.EventAttribute{
-				{Key: []byte("action"), Value: []byte("/ethermint.evm.v1.MsgEthereumTx")},
+				{Key: []byte("action"), Value: []byte("/smartdoge.evm.v1.MsgEthereumTx")},
 				{Key: []byte("key"), Value: []byte("ethm17xpfvakm2amg962yls6f84z3kell8c5lthdzgl")},
 				{Key: []byte("module"), Value: []byte("evm")},
 				{Key: []byte("sender"), Value: []byte(address)},

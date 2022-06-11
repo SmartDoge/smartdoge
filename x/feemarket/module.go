@@ -19,10 +19,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/tharsis/ethermint/x/feemarket/client/cli"
-	"github.com/tharsis/ethermint/x/feemarket/keeper"
-	"github.com/tharsis/ethermint/x/feemarket/simulation"
-	"github.com/tharsis/ethermint/x/feemarket/types"
+	"github.com/SmartDoge/smartdoge/x/feemarket/client/cli"
+	"github.com/SmartDoge/smartdoge/x/feemarket/keeper"
+	"github.com/SmartDoge/smartdoge/x/feemarket/simulation"
+	"github.com/SmartDoge/smartdoge/x/feemarket/types"
 )
 
 var (

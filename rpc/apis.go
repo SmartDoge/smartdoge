@@ -1,5 +1,5 @@
 // Package rpc contains RPC handler methods and utilities to start
-// Ethermint's Web3-compatibly JSON-RPC server.
+// SmartDoge's Web3-compatibly JSON-RPC server.
 package rpc
 
 import (
@@ -10,16 +10,16 @@ import (
 
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/tharsis/ethermint/rpc/backend"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/debug"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/eth"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/eth/filters"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/miner"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/net"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/personal"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/txpool"
-	"github.com/tharsis/ethermint/rpc/namespaces/ethereum/web3"
-	"github.com/tharsis/ethermint/rpc/types"
+	"github.com/SmartDoge/smartdoge/rpc/backend"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/debug"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/eth"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/eth/filters"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/miner"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/net"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/personal"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/txpool"
+	"github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/web3"
+	"github.com/SmartDoge/smartdoge/rpc/types"
 
 	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
 )

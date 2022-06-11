@@ -40,7 +40,7 @@ type EthAccountI interface {
 }
 
 // ----------------------------------------------------------------------------
-// Main Ethermint account
+// Main SmartDoge account
 // ----------------------------------------------------------------------------
 
 // ProtoAccount defines the prototype function for BaseAccount used for an

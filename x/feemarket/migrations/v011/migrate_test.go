@@ -10,13 +10,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/tharsis/ethermint/encoding"
+	"github.com/SmartDoge/smartdoge/encoding"
 
-	"github.com/tharsis/ethermint/app"
-	v010types "github.com/tharsis/ethermint/x/feemarket/migrations/v010/types"
-	v011 "github.com/tharsis/ethermint/x/feemarket/migrations/v011"
-	"github.com/tharsis/ethermint/x/feemarket/types"
-	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
+	"github.com/SmartDoge/smartdoge/app"
+	v010types "github.com/SmartDoge/smartdoge/x/feemarket/migrations/v010/types"
+	v011 "github.com/SmartDoge/smartdoge/x/feemarket/migrations/v011"
+	"github.com/SmartDoge/smartdoge/x/feemarket/types"
+	feemarkettypes "github.com/SmartDoge/smartdoge/x/feemarket/types"
 )
 
 func init() {

@@ -12,10 +12,11 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/tharsis/ethermint/encoding"
-	ethermint "github.com/tharsis/ethermint/types"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
+	"github.com/SmartDoge/smartdoge/encoding"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 
+	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
@@ -26,11 +27,10 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
-	"github.com/tharsis/ethermint/crypto/ethsecp256k1"
 )
 
 // DefaultConsensusParams defines the default Tendermint consensus params used in
-// EthermintApp testing.
+// SmartDogeApp testing.
 var DefaultConsensusParams = &abci.ConsensusParams{
 	Block: &abci.BlockParams{
 		MaxBytes: 200000,
@@ -48,10 +48,10 @@ var DefaultConsensusParams = &abci.ConsensusParams{
 	},
 }
 
-// Setup initializes a new EthermintApp. A Nop logger is set in EthermintApp.
-func Setup(isCheckTx bool, patchGenesis func(*EthermintApp, simapp.GenesisState) simapp.GenesisState) *EthermintApp {
+// Setup initializes a new SmartDogeApp. A Nop logger is set in SmartDogeApp.
+func Setup(isCheckTx bool, patchGenesis func(*SmartDogeApp, simapp.GenesisState) simapp.GenesisState) *SmartDogeApp {
 	db := dbm.NewMemDB()
-	app := NewEthermintApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, DefaultNodeHome, 5, encoding.MakeConfig(ModuleBasics), simapp.EmptyAppOptions{})
+	app := NewSmartDogeApp(log.NewNopLogger(), db, nil, true, map[int64]bool{}, DefaultNodeHome, 5, encoding.MakeConfig(ModuleBasics), simapp.EmptyAppOptions{})
 	if !isCheckTx {
 		// init chain must be called to stop deliverState from being nil
 		genesisState := NewDefaultGenesisState()
@@ -67,7 +67,7 @@ func Setup(isCheckTx bool, patchGenesis func(*EthermintApp, simapp.GenesisState)
 		// Initialize the chain
 		app.InitChain(
 			abci.RequestInitChain{
-				ChainId:         "ethermint_9000-1",
+				ChainId:         "smartdoge_9000-1",
 				Validators:      []abci.ValidatorUpdate{},
 				ConsensusParams: DefaultConsensusParams,
 				AppStateBytes:   stateBytes,
@@ -86,7 +86,7 @@ func RandomGenesisAccounts(simState *module.SimulationState) authtypes.GenesisAc
 	for i, acc := range simState.Accounts {
 		bacc := authtypes.NewBaseAccountWithAddress(acc.Address)
 
-		ethacc := &ethermint.EthAccount{
+		ethacc := &smartdoge.EthAccount{
 			BaseAccount: bacc,
 			CodeHash:    common.BytesToHash(emptyCodeHash).String(),
 		}

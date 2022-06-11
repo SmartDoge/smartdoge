@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
+	"github.com/SmartDoge/smartdoge/x/feemarket/migrations/v010/types"
+	v09types "github.com/SmartDoge/smartdoge/x/feemarket/migrations/v09/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/tharsis/ethermint/x/feemarket/migrations/v010/types"
-	v09types "github.com/tharsis/ethermint/x/feemarket/migrations/v09/types"
 )
 
 // KeyPrefixBaseFeeV1 is the base fee key prefix used in version 1

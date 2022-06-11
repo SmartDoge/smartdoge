@@ -41,9 +41,9 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	ethdebug "github.com/tharsis/ethermint/rpc/namespaces/ethereum/debug"
-	"github.com/tharsis/ethermint/server/config"
-	srvflags "github.com/tharsis/ethermint/server/flags"
+	ethdebug "github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/debug"
+	"github.com/SmartDoge/smartdoge/server/config"
+	srvflags "github.com/SmartDoge/smartdoge/server/flags"
 )
 
 // StartCmd runs the service passed in, either stand-alone or in-process with

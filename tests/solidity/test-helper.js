@@ -17,30 +17,30 @@ function panic(errMsg) {
 }
 
 function checkTestEnv() {
-  
+
   const argv = yargs(hideBin(process.argv))
     .usage('Usage: $0 [options] <tests>')
-    .example('$0 --network ethermint', 'run all tests using ethermint network')
-    .example('$0 --network ethermint --allowTests=test1,test2', 'run only test1 and test2 using ethermint network')
+    .example('$0 --network smartdoge', 'run all tests using smartdoge network')
+    .example('$0 --network smartdoge --allowTests=test1,test2', 'run only test1 and test2 using smartdoge network')
     .help('h').alias('h', 'help')
-    .describe('network', 'set which network to use: ganache|ethermint')
+    .describe('network', 'set which network to use: ganache|smartdoge')
     .describe('batch', 'set the test batch in parallelized testing. Format: %d-%d')
     .describe('allowTests', 'only run specified tests. Separated by comma.')
-    .boolean('verbose-log').describe('verbose-log', 'print ethermintd output, default false')
+    .boolean('verbose-log').describe('verbose-log', 'print smartdoged output, default false')
     .argv;
 
   if (!fs.existsSync(path.join(__dirname, './node_modules'))) {
     panic('node_modules not existed. Please run `yarn install` before running tests.');
   }
   const runConfig = {};
-  
+
   // Check test network
   if (!argv.network) {
     runConfig.network = 'ganache';
   }
   else {
-    if (argv.network !== 'ethermint' && argv.network !== 'ganache') {
-      panic('network is invalid. Must be ganache or ethermint');
+    if (argv.network !== 'smartdoge' && argv.network !== 'ganache') {
+      panic('network is invalid. Must be ganache or smartdoge');
     }
     else {
       runConfig.network = argv.network;
@@ -55,15 +55,15 @@ function checkTestEnv() {
     if (!toRunBatch || !allBatches) {
       panic('bad batch input format');
     }
-    
+
     if (toRunBatch > allBatches) {
       panic('test batch number is larger than batch counts');
     }
-    
-    if (toRunBatch <= 0 || allBatches <=0 ) {
+
+    if (toRunBatch <= 0 || allBatches <= 0) {
       panic('test batch number or batch counts must be non-zero values');
     }
-    
+
     runConfig.batch = {};
     runConfig.batch.this = toRunBatch;
     runConfig.batch.all = allBatches;
@@ -99,7 +99,7 @@ function loadTests(runConfig) {
     // test package.json
     try {
       const testManifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'suites', dirname, 'package.json'), 'utf-8'))
-      const needScripts = ['test-ganache', 'test-ethermint'];
+      const needScripts = ['test-ganache', 'test-smartdoge'];
       for (const s of needScripts) {
         if (Object.keys(testManifest['scripts']).indexOf(s) === -1) {
           logger.warn(`${dirname} does not have test script: \`${s}\`. Skip this test suite.`);
@@ -132,15 +132,15 @@ function loadTests(runConfig) {
 }
 
 function performTestSuite({ testName, network }) {
-  const cmd = network === 'ganache' ? 'test-ganache' : 'test-ethermint';
+  const cmd = network === 'ganache' ? 'test-ganache' : 'test-smartdoge';
   return new Promise((resolve, reject) => {
     const testProc = spawn('yarn', [cmd], {
       cwd: path.join(__dirname, 'suites', testName)
     });
-  
+
     testProc.stdout.pipe(process.stdout);
     testProc.stderr.pipe(process.stderr);
-  
+
     testProc.on('close', code => {
       if (code === 0) {
         console.log("end");
@@ -168,37 +168,37 @@ async function performTests({ allTests, runConfig }) {
 }
 
 function setupNetwork({ runConfig, timeout }) {
-  if (runConfig.network !== 'ethermint') {
+  if (runConfig.network !== 'smartdoge') {
     // no need to start ganache. Truffle will start it
     return;
   }
 
-  // Spawn the ethermint process
+  // Spawn the smartdoge process
 
   const spawnPromise = new Promise((resolve, reject) => {
-    const ethermintdProc = spawn('./init-test-node.sh', {
+    const smartdogedProc = spawn('./init-test-node.sh', {
       cwd: __dirname,
       stdio: ['ignore', runConfig.verboseLog ? 'pipe' : 'ignore', 'pipe'],
     });
 
-    logger.info(`Starting Ethermintd process... timeout: ${timeout}ms`);
+    logger.info(`Starting smartdoged process... timeout: ${timeout}ms`);
     if (runConfig.verboseLog) {
-      ethermintdProc.stdout.pipe(process.stdout);
+      smartdogedProc.stdout.pipe(process.stdout);
     }
-    ethermintdProc.stderr.on('data', d => {
+    smartdogedProc.stderr.on('data', d => {
       const oLine = d.toString();
       if (runConfig.verboseLog) {
         process.stdout.write(oLine);
       }
       if (oLine.indexOf('Starting JSON-RPC server') !== -1) {
-        logger.info('Ethermintd started');
-        resolve(ethermintdProc);
+        logger.info('smartdoged started');
+        resolve(smartdogedProc);
       }
     });
   });
 
   const timeoutPromise = new Promise((resolve, reject) => {
-    setTimeout(() => reject(new Error('Start ethermintd timeout!')), timeout);
+    setTimeout(() => reject(new Error('Start smartdoged timeout!')), timeout);
   });
   return Promise.race([spawnPromise, timeoutPromise]);
 }

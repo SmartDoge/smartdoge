@@ -12,7 +12,7 @@ A user can query and interact with the `feemarket` module using the CLI.
 The `query` commands allow users to query `feemarket` state.
 
 ```go
-ethermintd query feemarket --help
+smartdoged query feemarket --help
 ```
 
 #### Base Fee
@@ -20,13 +20,13 @@ ethermintd query feemarket --help
 The `base-fee` command allows users to query the block base fee by height.
 
 ```
-ethermintd query feemarket base-fee [height] [flags]
+smartdoged query feemarket base-fee [height] [flags]
 ```
 
 Example:
 
 ```
-ethermintd query feemarket base-fee 5...
+smartdoged query feemarket base-fee 5...
 ```
 
 Example Output:
@@ -40,13 +40,13 @@ base_fee: "512908936"
 The `block-gas` command allows users to query the block gas by height.
 
 ```
-ethermintd query feemarket block-gas [height] [flags]
+smartdoged query feemarket block-gas [height] [flags]
 ```
 
 Example:
 
 ```
-ethermintd query feemarket block-gas 5...
+smartdoged query feemarket block-gas 5...
 ```
 
 Example Output:
@@ -60,13 +60,13 @@ gas: "21000"
 The `params` command allows users to query the module params.
 
 ```
-ethermintd query params subspace [subspace] [key] [flags]
+smartdoged query params subspace [subspace] [key] [flags]
 ```
 
 Example:
 
 ```
-ethermintd query params subspace feemarket ElasticityMultiplier ...
+smartdoged query params subspace feemarket ElasticityMultiplier ...
 ```
 
 Example Output:
@@ -84,9 +84,9 @@ value: "2"
 
 | Verb   | Method                                               | Description                                                                |
 | ------ | ---------------------------------------------------- | -------------------------------------------------------------------------- |
-| `gRPC`  | `ethermint.feemarket.v1.Query/Params`               | Get the module params                                                      |
-| `gRPC`  | `ethermint.feemarket.v1.Query/BaseFee`              | Get the block base fee                                                     |
-| `gRPC`  | `ethermint.feemarket.v1.Query/BlockGas`             | Get the block gas used                                                     |
+| `gRPC`  | `smartdoge.feemarket.v1.Query/Params`               | Get the module params                                                      |
+| `gRPC`  | `smartdoge.feemarket.v1.Query/BaseFee`              | Get the block base fee                                                     |
+| `gRPC`  | `smartdoge.feemarket.v1.Query/BlockGas`             | Get the block gas used                                                     |
 | `GET`  | `/feemarket/evm/v1/params`                           | Get the module params                                                      |
 | `GET`  | `/feemarket/evm/v1/base_fee`                         | Get the block base fee                                                     |
 | `GET`  | `/feemarket/evm/v1/block_gas`                        | Get the block gas used                                                     |

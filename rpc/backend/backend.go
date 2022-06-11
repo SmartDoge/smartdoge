@@ -5,6 +5,10 @@ import (
 	"math/big"
 	"time"
 
+	"github.com/SmartDoge/smartdoge/rpc/types"
+	"github.com/SmartDoge/smartdoge/server/config"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/server"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -15,10 +19,6 @@ import (
 	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/tendermint/tendermint/libs/log"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
-	"github.com/tharsis/ethermint/rpc/types"
-	"github.com/tharsis/ethermint/server/config"
-	ethermint "github.com/tharsis/ethermint/types"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 // BackendI implements the Cosmos and EVM backend.
@@ -96,7 +96,7 @@ type Backend struct {
 
 // NewBackend creates a new Backend instance for cosmos and ethereum namespaces
 func NewBackend(ctx *server.Context, logger log.Logger, clientCtx client.Context) *Backend {
-	chainID, err := ethermint.ParseChainID(clientCtx.ChainID)
+	chainID, err := smartdoge.ParseChainID(clientCtx.ChainID)
 	if err != nil {
 		panic(err)
 	}

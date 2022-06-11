@@ -7,13 +7,13 @@ import (
 )
 
 const (
-	// AttoPhoton defines the default coin denomination used in Ethermint in:
+	// AttoPhoton defines the default coin denomination used in SmartDoge in:
 	//
 	// - Staking parameters: denomination used as stake in the dPoS chain
 	// - Mint parameters: denomination minted due to fee distribution rewards
 	// - Governance parameters: denomination used for spam prevention in proposal deposits
 	// - Crisis parameters: constant fee denomination used for spam prevention to check broken invariant
-	// - EVM parameters: denomination used for running EVM state transitions in Ethermint.
+	// - EVM parameters: denomination used for running EVM state transitions in SmartDoge.
 	AttoPhoton string = "aphoton"
 
 	// BaseDenomUnit defines the base denomination unit for Photons.

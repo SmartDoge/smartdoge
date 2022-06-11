@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"math/big"
 
+	smartdoge "github.com/SmartDoge/smartdoge/types"
+	"github.com/SmartDoge/smartdoge/x/evm/statedb"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/ethereum/go-ethereum/common"
-	ethermint "github.com/tharsis/ethermint/types"
-	"github.com/tharsis/ethermint/x/evm/statedb"
-	"github.com/tharsis/ethermint/x/evm/types"
 )
 
 var _ statedb.Keeper = &Keeper{}
@@ -116,7 +116,7 @@ func (k *Keeper) SetAccount(ctx sdk.Context, addr common.Address, account stated
 
 	codeHash := common.BytesToHash(account.CodeHash)
 
-	if ethAcct, ok := acct.(ethermint.EthAccountI); ok {
+	if ethAcct, ok := acct.(smartdoge.EthAccountI); ok {
 		if err := ethAcct.SetCodeHash(codeHash); err != nil {
 			return err
 		}
@@ -186,7 +186,7 @@ func (k *Keeper) DeleteAccount(ctx sdk.Context, addr common.Address) error {
 	}
 
 	// NOTE: only Ethereum accounts (contracts) can be selfdestructed
-	ethAcct, ok := acct.(ethermint.EthAccountI)
+	ethAcct, ok := acct.(smartdoge.EthAccountI)
 	if !ok {
 		return sdkerrors.Wrapf(types.ErrInvalidAccount, "type %T, address %s", acct, addr)
 	}

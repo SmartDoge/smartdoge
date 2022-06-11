@@ -9,15 +9,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tharsis/ethermint/app"
+	"github.com/SmartDoge/smartdoge/app"
 
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	evmkeeper "github.com/tharsis/ethermint/x/evm/keeper"
-	"github.com/tharsis/ethermint/x/evm/statedb"
+	evmkeeper "github.com/SmartDoge/smartdoge/x/evm/keeper"
+	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/consensus/ethash"
@@ -28,12 +28,12 @@ import (
 	ethparams "github.com/ethereum/go-ethereum/params"
 	ethrlp "github.com/ethereum/go-ethereum/rlp"
 
+	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto/tmhash"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
 	"github.com/tendermint/tendermint/version"
-	"github.com/tharsis/ethermint/crypto/ethsecp256k1"
 )
 
 var (
@@ -52,7 +52,7 @@ func init() {
 type ImporterTestSuite struct {
 	suite.Suite
 
-	app *app.EthermintApp
+	app *app.SmartDogeApp
 	ctx sdk.Context
 }
 
@@ -66,7 +66,7 @@ func (suite *ImporterTestSuite) DoSetupTest(t require.TestingT) {
 	consAddress := sdk.ConsAddress(priv.PubKey().Address())
 	suite.ctx = suite.app.BaseApp.NewContext(checkTx, tmproto.Header{
 		Height:          1,
-		ChainID:         "ethermint_9000-1",
+		ChainID:         "smartdoge_9000-1",
 		Time:            time.Now().UTC(),
 		ProposerAddress: consAddress.Bytes(),
 		Version: tmversion.Consensus{

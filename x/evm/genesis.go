@@ -10,9 +10,9 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	ethermint "github.com/tharsis/ethermint/types"
-	"github.com/tharsis/ethermint/x/evm/keeper"
-	"github.com/tharsis/ethermint/x/evm/types"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
+	"github.com/SmartDoge/smartdoge/x/evm/keeper"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // InitGenesis initializes genesis state based on exported genesis
@@ -40,7 +40,7 @@ func InitGenesis(
 			panic(fmt.Errorf("account not found for address %s", account.Address))
 		}
 
-		ethAcct, ok := acc.(ethermint.EthAccountI)
+		ethAcct, ok := acc.(smartdoge.EthAccountI)
 		if !ok {
 			panic(
 				fmt.Errorf("account %s must be an EthAccount interface, got %T",
@@ -69,7 +69,7 @@ func InitGenesis(
 func ExportGenesis(ctx sdk.Context, k *keeper.Keeper, ak types.AccountKeeper) *types.GenesisState {
 	var ethGenAccounts []types.GenesisAccount
 	ak.IterateAccounts(ctx, func(account authtypes.AccountI) bool {
-		ethAccount, ok := account.(ethermint.EthAccountI)
+		ethAccount, ok := account.(smartdoge.EthAccountI)
 		if !ok {
 			// ignore non EthAccounts
 			return false

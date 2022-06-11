@@ -19,10 +19,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/tharsis/ethermint/x/evm/client/cli"
-	"github.com/tharsis/ethermint/x/evm/keeper"
-	"github.com/tharsis/ethermint/x/evm/simulation"
-	"github.com/tharsis/ethermint/x/evm/types"
+	"github.com/SmartDoge/smartdoge/x/evm/client/cli"
+	"github.com/SmartDoge/smartdoge/x/evm/keeper"
+	"github.com/SmartDoge/smartdoge/x/evm/simulation"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 var (

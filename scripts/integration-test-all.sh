@@ -17,10 +17,10 @@ RPC_PORT="854"
 IP_ADDR="0.0.0.0"
 
 KEY="mykey"
-CHAINID="ethermint_9000-1"
+CHAINID="smartdoge_9000-1"
 MONIKER="mymoniker"
 
-## default port prefixes for ethermintd
+## default port prefixes for smartdoged
 NODE_P2P_PORT="2660"
 NODE_PORT="2663"
 NODE_RPC_PORT="2666"
@@ -52,29 +52,29 @@ done
 
 set -euxo pipefail
 
-DATA_DIR=$(mktemp -d -t ethermint-datadir.XXXXX)
+DATA_DIR=$(mktemp -d -t smartdoge-datadir.XXXXX)
 
 if [[ ! "$DATA_DIR" ]]; then
     echo "Could not create $DATA_DIR"
     exit 1
 fi
 
-# Compile ethermint
-echo "compiling ethermint"
+# Compile smartdoge
+echo "compiling smartdoge"
 make build
 
 # PID array declaration
 arr=()
 
 init_func() {
-    "$PWD"/build/ethermintd keys add $KEY"$i" --keyring-backend test --home "$DATA_DIR$i" --no-backup --algo "eth_secp256k1"
-    "$PWD"/build/ethermintd init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
-    "$PWD"/build/ethermintd add-genesis-account \
-    "$("$PWD"/build/ethermintd keys show "$KEY$i" --keyring-backend test -a --home "$DATA_DIR$i")" 1000000000000000000wei \
+    "$PWD"/build/smartdoged keys add $KEY"$i" --keyring-backend test --home "$DATA_DIR$i" --no-backup --algo "eth_secp256k1"
+    "$PWD"/build/smartdoged init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
+    "$PWD"/build/smartdoged add-genesis-account \
+    "$("$PWD"/build/smartdoged keys show "$KEY$i" --keyring-backend test -a --home "$DATA_DIR$i")" 1000000000000000000wei \
     --keyring-backend test --home "$DATA_DIR$i"
-    "$PWD"/build/ethermintd gentx "$KEY$i" 1000000000000000000wei --chain-id $CHAINID --keyring-backend test --home "$DATA_DIR$i"
-    "$PWD"/build/ethermintd collect-gentxs --home "$DATA_DIR$i"
-    "$PWD"/build/ethermintd validate-genesis --home "$DATA_DIR$i"
+    "$PWD"/build/smartdoged gentx "$KEY$i" 1000000000000000000wei --chain-id $CHAINID --keyring-backend test --home "$DATA_DIR$i"
+    "$PWD"/build/smartdoged collect-gentxs --home "$DATA_DIR$i"
+    "$PWD"/build/smartdoged validate-genesis --home "$DATA_DIR$i"
 
     if [[ $MODE == "pending" ]]; then
       ls $DATA_DIR$i
@@ -103,18 +103,18 @@ init_func() {
 }
 
 start_func() {
-    echo "starting ethermint node $i in background ..."
-    "$PWD"/build/ethermintd start --pruning=nothing --rpc.unsafe \
+    echo "starting smartdoge node $i in background ..."
+    "$PWD"/build/smartdoged start --pruning=nothing --rpc.unsafe \
     --p2p.laddr tcp://$IP_ADDR:$NODE_P2P_PORT"$i" --address tcp://$IP_ADDR:$NODE_PORT"$i" --rpc.laddr tcp://$IP_ADDR:$NODE_RPC_PORT"$i" \
     --json-rpc.address=$IP_ADDR:$RPC_PORT"$i" \
     --json-rpc.api="eth,txpool,personal,net,debug,web3" \
     --keyring-backend test --home "$DATA_DIR$i" \
     >"$DATA_DIR"/node"$i".log 2>&1 & disown
 
-    ETHERMINT_PID=$!
-    echo "started ethermint node, pid=$ETHERMINT_PID"
+    SMARTDOGE_PID=$!
+    echo "started smartdoge node, pid=$SMARTDOGE_PID"
     # add PID to array
-    arr+=("$ETHERMINT_PID")
+    arr+=("$SMARTDOGE_PID")
 
     if [[ $MODE == "pending" ]]; then
       echo "waiting for the first block..."
@@ -144,7 +144,7 @@ if [[ -z $TEST || $TEST == "integration" ]] ; then
 
     for i in $(seq 1 "$TEST_QTD"); do
         HOST_RPC=http://$IP_ADDR:$RPC_PORT"$i"
-        echo "going to test ethermint node $HOST_RPC ..."
+        echo "going to test smartdoge node $HOST_RPC ..."
         MODE=$MODE HOST=$HOST_RPC go test ./tests/e2e/... -timeout=$time_out -v -short
         TEST_FAIL=$?
     done
@@ -158,7 +158,7 @@ if [[ -z $TEST || $TEST == "rpc" ||  $TEST == "pending" ]]; then
 
     for i in $(seq 1 "$TEST_QTD"); do
         HOST_RPC=http://$IP_ADDR:$RPC_PORT"$i"
-        echo "going to test ethermint node $HOST_RPC ..."
+        echo "going to test smartdoge node $HOST_RPC ..."
         MODE=$MODE HOST=$HOST_RPC go test ./tests/rpc/... -timeout=$time_out -v -short
 
         TEST_FAIL=$?
@@ -167,12 +167,12 @@ if [[ -z $TEST || $TEST == "rpc" ||  $TEST == "pending" ]]; then
 fi
 
 stop_func() {
-    ETHERMINT_PID=$i
-    echo "shutting down node, pid=$ETHERMINT_PID ..."
+    SMARTDOGE_PID=$i
+    echo "shutting down node, pid=$SMARTDOGE_PID ..."
 
-    # Shutdown ethermint node
-    kill -9 "$ETHERMINT_PID"
-    wait "$ETHERMINT_PID"
+    # Shutdown smartdoge node
+    kill -9 "$SMARTDOGE_PID"
+    wait "$SMARTDOGE_PID"
 
     if [ $REMOVE_DATA_DIR == "true" ]
     then

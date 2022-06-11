@@ -3,12 +3,12 @@ package ante_test
 import (
 	"math/big"
 
+	"github.com/SmartDoge/smartdoge/app/ante"
+	"github.com/SmartDoge/smartdoge/tests"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/tharsis/ethermint/app/ante"
-	"github.com/tharsis/ethermint/tests"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 var execTypes = []struct {

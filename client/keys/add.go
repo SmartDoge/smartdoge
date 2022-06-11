@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"sort"
 
-	etherminthd "github.com/tharsis/ethermint/crypto/hd"
+	smartdogehd "github.com/SmartDoge/smartdoge/crypto/hd"
 
 	bip39 "github.com/cosmos/go-bip39"
 	"github.com/spf13/cobra"
@@ -79,7 +79,7 @@ Example:
 	f.Uint32(flagCoinType, sdk.GetConfig().GetCoinType(), "coin type number for HD derivation")
 	f.Uint32(flagAccount, 0, "Account number for HD derivation")
 	f.Uint32(flagIndex, 0, "Address index number for HD derivation")
-	f.String(flags.FlagKeyAlgorithm, string(etherminthd.EthSecp256k1Type), "Key signing algorithm to generate keys for")
+	f.String(flags.FlagKeyAlgorithm, string(smartdogehd.EthSecp256k1Type), "Key signing algorithm to generate keys for")
 
 	return cmd
 }
@@ -122,7 +122,7 @@ func RunAddCmd(ctx client.Context, cmd *cobra.Command, args []string, inBuf *buf
 
 	if dryRun, _ := cmd.Flags().GetBool(flags.FlagDryRun); dryRun {
 		// use in memory keybase
-		kb = keyring.NewInMemory(etherminthd.EthSecp256k1Option())
+		kb = keyring.NewInMemory(smartdogehd.EthSecp256k1Option())
 	} else {
 		_, err = kb.Key(name)
 		if err == nil {

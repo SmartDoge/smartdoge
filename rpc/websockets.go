@@ -26,11 +26,11 @@ import (
 	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/tharsis/ethermint/rpc/ethereum/pubsub"
-	rpcfilters "github.com/tharsis/ethermint/rpc/namespaces/ethereum/eth/filters"
-	"github.com/tharsis/ethermint/rpc/types"
-	"github.com/tharsis/ethermint/server/config"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
+	"github.com/SmartDoge/smartdoge/rpc/ethereum/pubsub"
+	rpcfilters "github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/eth/filters"
+	"github.com/SmartDoge/smartdoge/rpc/types"
+	"github.com/SmartDoge/smartdoge/server/config"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 type WebsocketsServer interface {
