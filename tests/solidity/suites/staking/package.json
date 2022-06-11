@@ -5,7 +5,7 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "test-ganache": "yarn truffle test",
-    "test-ethermint": "yarn truffle test --network ethermint",
+    "test-smartdoge": "yarn truffle test --network smartdoge",
     "postinstall": "patch-package"
   },
   "devDependencies": {

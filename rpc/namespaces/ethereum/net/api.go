@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
+	smartdoge "github.com/SmartDoge/smartdoge/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	ethermint "github.com/tharsis/ethermint/types"
 )
 
 // PublicAPI is the eth_ prefixed set of APIs in the Web3 JSON-RPC spec.
@@ -18,7 +18,7 @@ type PublicAPI struct {
 // NewPublicAPI creates an instance of the public Net Web3 API.
 func NewPublicAPI(clientCtx client.Context) *PublicAPI {
 	// parse the chainID from a integer string
-	chainIDEpoch, err := ethermint.ParseChainID(clientCtx.ChainID)
+	chainIDEpoch, err := smartdoge.ParseChainID(clientCtx.ChainID)
 	if err != nil {
 		panic(err)
 	}

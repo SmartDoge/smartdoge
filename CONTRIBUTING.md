@@ -19,14 +19,14 @@
   - [Point Release Procedure](#point-release-procedure)
   - [Code Owner Membership](#code-owner-membership)
 
-Thank you for considering making contributions to Ethermint!
+Thank you for considering making contributions to SmartDoge!
 
 Contributing to this repo can mean many things such as participating in
 discussion or proposing code changes. To ensure a smooth workflow for all
 contributors, the general procedure for contributing has been established:
 
-1. Either [open](https://github.com/tharsis/ethermint/issues/new/choose) or
-   [find](https://github.com/tharsis/ethermint/issues) an issue you'd like to help with
+1. Either [open](https://github.com/SmartDoge/smartdoge/issues/new/choose) or
+   [find](https://github.com/SmartDoge/smartdoge/issues) an issue you'd like to help with
 2. Participate in thoughtful discussion on that issue
 3. If you would like to contribute:
    1. If the issue is a proposal, ensure that the proposal has been accepted
@@ -37,7 +37,7 @@ contributors, the general procedure for contributing has been established:
       to begin work
    4. Follow standard GitHub best practices: fork the repo, branch from the
       HEAD of `main`, make some commits, and submit a PR to `main`
-      - For core developers working within the ethermint repo, to ensure a clear
+      - For core developers working within the smartdoge repo, to ensure a clear
         ownership of branches, branches must be named with the convention
         `{moniker}/{issue#}-branch-name`
    5. Be sure to submit the PR in `Draft` mode submit your PR early, even if
@@ -55,7 +55,7 @@ taken place in a GitHub issue, that PR runs a high likelihood of being rejected.
 Other notes:
 
 - Looking for a good place to start contributing? How about checking out some
-  [good first issues](https://github.com/tharsis/ethermint/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+  [good first issues](https://github.com/SmartDoge/smartdoge/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 - Please make sure to run `make format` before every commit - the easiest way
   to do this is have your editor run it for you upon saving a file. Additionally
   please ensure that your code is lint compliant by running `make lint-fix`.
@@ -64,7 +64,7 @@ Other notes:
 
 ## Architecture Decision Records (ADR)
 
-When proposing an architecture decision for Ethermint, please start by opening an [issue](https://github.com/tharsis/ethermint/issues/new/choose) or a [discussion](https://github.com/tharsis/ethermint/discussions/new) with a summary of the proposal. Once the proposal has been discussed and there is rough alignment on a high-level approach to the design, the [ADR creation process](https://github.com/tharsis/ethermint/blob/main/docs/architecture/PROCESS.md) can begin. We are following this process to ensure all involved parties are in agreement before any party begins coding the proposed implementation. If you would like to see examples of how these are written, please refer to the current [ADRs](https://github.com/tharsis/ethermint/tree/main/docs/architecture).
+When proposing an architecture decision for SmartDoge, please start by opening an [issue](https://github.com/SmartDoge/smartdoge/issues/new/choose) or a [discussion](https://github.com/SmartDoge/smartdoge/discussions/new) with a summary of the proposal. Once the proposal has been discussed and there is rough alignment on a high-level approach to the design, the [ADR creation process](https://github.com/SmartDoge/smartdoge/blob/main/docs/architecture/PROCESS.md) can begin. We are following this process to ensure all involved parties are in agreement before any party begins coding the proposed implementation. If you would like to see examples of how these are written, please refer to the current [ADRs](https://github.com/SmartDoge/smartdoge/tree/main/docs/architecture).
 
 ## Pull Requests
 
@@ -109,20 +109,20 @@ items. In addition, use the following review explanations:
 ## Forking
 
 Go requires code to live under absolute paths, and this requirement complicates forking.
-While my fork lives at `https://github.com/rigeyrigerige/ethermint`,
-the code should never exist at `$GOPATH/src/github.com/rigeyrigerige/ethermint`.
+While my fork lives at `https://github.com/rigeyrigerige/smartdoge`,
+the code should never exist at `$GOPATH/src/github.com/rigeyrigerige/smartdoge`.
 Instead, we use `git remote` to add the fork as a new remote for the original repo,
-`$GOPATH/src/github.com/tharsis/ethermint`, and do all the work there.
+`$GOPATH/src/github.com/SmartDoge/smartdoge`, and do all the work there.
 
 For instance, to create a fork and work on a branch of it, I would:
 
 - Create the fork on GitHub, using the fork button.
-- Go to the original repo checked out locally (i.e. `$GOPATH/src/github.com/tharsis/ethermint`)
+- Go to the original repo checked out locally (i.e. `$GOPATH/src/github.com/SmartDoge/smartdoge`)
 - `git remote rename origin upstream`
-- `git remote add origin git@github.com:rigeyrigerige/ethermint.git`
+- `git remote add origin git@github.com:rigeyrigerige/smartdoge.git`
 
-Now `origin` refers to my fork and `upstream` refers to the Ethermint version.
-So I can `git push -u origin main` to update my fork, and make pull requests to Ethermint from there.
+Now `origin` refers to my fork and `upstream` refers to the SmartDoge version.
+So I can `git push -u origin main` to update my fork, and make pull requests to SmartDoge from there.
 Of course, replace `rigeyrigerige` with your git handle.
 
 To pull in updates from the origin repo, run
@@ -146,7 +146,7 @@ build, in which case we can fall back on `go mod tidy -v`.
 
 ## Protobuf
 
-We use [Protocol Buffers](https://developers.google.com/protocol-buffers) along with [gogoproto](https://github.com/gogo/protobuf) to generate code for use in Ethermint.
+We use [Protocol Buffers](https://developers.google.com/protocol-buffers) along with [gogoproto](https://github.com/gogo/protobuf) to generate code for use in SmartDoge.
 
 For determinstic behavior around Protobuf tooling, everything is containerized using Docker. Make sure to have Docker installed on your machine, or head to [Docker's website](https://docs.docker.com/get-docker/) to install it.
 
@@ -175,7 +175,7 @@ For example, in vscode your `.vscode/settings.json` should look like:
 
 ## Testing
 
-Tests can be ran by running `make test` at the top level of Ethermint repository.
+Tests can be ran by running `make test` at the top level of SmartDoge repository.
 
 We expect tests to use `require` or `assert` rather than `t.Skip` or `t.Fail`,
 unless there is a reason to do otherwise.
@@ -205,7 +205,7 @@ User-facing repos should adhere to the [trunk based development](https://trunkba
 
 Libraries need not follow the model strictly, but would be wise to.
 
-Ethermint utilizes [semantic versioning](https://semver.org/).
+SmartDoge utilizes [semantic versioning](https://semver.org/).
 
 ### PR Targeting
 
@@ -220,7 +220,7 @@ should be targeted against the release candidate branch.
 - `main` must never fail `make lint test test-race`
 - `main` should not fail `make lint`
 - no `--force` onto `main` (except when reverting a broken commit, which should seldom happen)
-- create a development branch either on github.com/tharsis/ethermint, or your fork (using `git remote add origin`)
+- create a development branch either on github.com/SmartDoge/smartdoge, or your fork (using `git remote add origin`)
 - before submitting a pull request, begin `git rebase` on top of `main`
 
 ### Pull Merge Procedure
@@ -330,20 +330,20 @@ the community of this project.
 
 ## Concept & Release Approval Process
 
-The process for Ethermint maintainers take features and ADRs from concept to release
+The process for SmartDoge maintainers take features and ADRs from concept to release
 is broken up into three distinct stages: **Strategy Discovery**, **Concept Approval**, and
 **Implementation & Release Approval**
 
 ### Strategy Discovery
 
-- Develop long term priorities, strategy and roadmap for Ethermint
+- Develop long term priorities, strategy and roadmap for SmartDoge
 - Release committee not yet defined as there is already a roadmap that can be used for the time being
 
 ### Concept Approval
 
-- Architecture Decision Records (ADRs) may be proposed by any contributors or maintainers of Ethermint,
+- Architecture Decision Records (ADRs) may be proposed by any contributors or maintainers of SmartDoge,
     and should follow the guidelines outlined in the
-    [ADR Creation Process](https://github.com/tharsis/ethermint/blob/main/docs/architecture/PROCESS.md)
+    [ADR Creation Process](https://github.com/SmartDoge/smartdoge/blob/main/docs/architecture/PROCESS.md)
 - After proposal, a time bound period for Request for Comment (RFC) on ADRs commences
 - ADRs are intended to be iterative, and may be merged into `main` while still in a `Proposed` status
 
@@ -380,10 +380,10 @@ Members must:
 
 - Participate in all or almost all ADR discussions, both on GitHub as well as in bi-weekly Architecture Review
   meetings
-- Be active contributors to Ethermint, and furthermore should be continuously making substantial contributions
+- Be active contributors to SmartDoge, and furthermore should be continuously making substantial contributions
   to the project's codebase, review process, documentation and ADRs
-- Have stake in Ethermint, represented by:
-  - Being a client / user of Ethermint
+- Have stake in SmartDoge, represented by:
+  - Being a client / user of SmartDoge
   - "[giving back](https://www.debian.org/social_contract)" to the software
 - Delegate representation in case of vacation or absence
 

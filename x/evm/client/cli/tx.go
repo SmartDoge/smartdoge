@@ -12,8 +12,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	rpctypes "github.com/tharsis/ethermint/rpc/types"
-	"github.com/tharsis/ethermint/x/evm/types"
+	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // GetTxCmd returns the transaction commands for this module

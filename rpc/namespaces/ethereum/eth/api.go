@@ -7,7 +7,7 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/tharsis/ethermint/ethereum/eip712"
+	"github.com/SmartDoge/smartdoge/ethereum/eip712"
 
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 
@@ -35,11 +35,11 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/tharsis/ethermint/crypto/hd"
-	"github.com/tharsis/ethermint/rpc/backend"
-	rpctypes "github.com/tharsis/ethermint/rpc/types"
-	ethermint "github.com/tharsis/ethermint/types"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
+	"github.com/SmartDoge/smartdoge/crypto/hd"
+	"github.com/SmartDoge/smartdoge/rpc/backend"
+	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // PublicAPI is the eth_ prefixed set of APIs in the Web3 JSON-RPC spec.
@@ -61,7 +61,7 @@ func NewPublicAPI(
 	backend backend.EVMBackend,
 	nonceLock *rpctypes.AddrLocker,
 ) *PublicAPI {
-	eip155ChainID, err := ethermint.ParseChainID(clientCtx.ChainID)
+	eip155ChainID, err := smartdoge.ParseChainID(clientCtx.ChainID)
 	if err != nil {
 		panic(err)
 	}
@@ -122,7 +122,7 @@ func (e *PublicAPI) Ctx() context.Context {
 // ProtocolVersion returns the supported Ethereum protocol version.
 func (e *PublicAPI) ProtocolVersion() hexutil.Uint {
 	e.logger.Debug("eth_protocolVersion")
-	return hexutil.Uint(ethermint.ProtocolVersion)
+	return hexutil.Uint(smartdoge.ProtocolVersion)
 }
 
 // ChainId is the EIP-155 replay-protection chain id for the current ethereum chain config.
@@ -194,7 +194,7 @@ func (e *PublicAPI) Hashrate() hexutil.Uint64 {
 	return 0
 }
 
-// GasPrice returns the current gas price based on Ethermint's gas price oracle.
+// GasPrice returns the current gas price based on SmartDoge's gas price oracle.
 func (e *PublicAPI) GasPrice() (*hexutil.Big, error) {
 	e.logger.Debug("eth_gasPrice")
 	var (
@@ -625,7 +625,7 @@ func (e *PublicAPI) Resend(ctx context.Context, args evmtypes.TransactionArgs, g
 	}
 
 	for _, tx := range pending {
-		// FIXME does Resend api possible at all?  https://github.com/tharsis/ethermint/issues/905
+		// FIXME does Resend api possible at all?  https://github.com/SmartDoge/smartdoge/issues/905
 		p, err := evmtypes.UnwrapEthereumMsg(tx, common.Hash{})
 		if err != nil {
 			// not valid ethereum tx
@@ -1118,7 +1118,7 @@ func (e *PublicAPI) GetProof(address common.Address, storageKeys []string, block
 		Balance:      (*hexutil.Big)(balance.BigInt()),
 		CodeHash:     common.HexToHash(res.CodeHash),
 		Nonce:        hexutil.Uint64(res.Nonce),
-		StorageHash:  common.Hash{}, // NOTE: Ethermint doesn't have a storage hash. TODO: implement?
+		StorageHash:  common.Hash{}, // NOTE: SmartDoge doesn't have a storage hash. TODO: implement?
 		StorageProof: storageProofs,
 	}, nil
 }

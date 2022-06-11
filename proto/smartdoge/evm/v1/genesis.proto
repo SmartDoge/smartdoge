@@ -1,10 +1,10 @@
 syntax = "proto3";
-package ethermint.evm.v1;
+package smartdoge.evm.v1;
 
 import "gogoproto/gogo.proto";
-import "ethermint/evm/v1/evm.proto";
+import "smartdoge/evm/v1/evm.proto";
 
-option go_package = "github.com/tharsis/ethermint/x/evm/types";
+option go_package = "github.com/SmartDoge/smartdoge/x/evm/types";
 
 // GenesisState defines the evm module's genesis state.
 message GenesisState {

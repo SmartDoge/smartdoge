@@ -26,9 +26,9 @@ const (
 // Amino encoding names
 const (
 	// PrivKeyName defines the amino encoding name for the EthSecp256k1 private key
-	PrivKeyName = "ethermint/PrivKeyEthSecp256k1"
+	PrivKeyName = "smartdoge/PrivKeyEthSecp256k1"
 	// PubKeyName defines the amino encoding name for the EthSecp256k1 public key
-	PubKeyName = "ethermint/PubKeyEthSecp256k1"
+	PubKeyName = "smartdoge/PubKeyEthSecp256k1"
 )
 
 // ----------------------------------------------------------------------------

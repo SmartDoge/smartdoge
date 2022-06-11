@@ -1,9 +1,9 @@
 syntax = "proto3";
-package ethermint.evm.v1;
+package smartdoge.evm.v1;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/tharsis/ethermint/x/evm/types";
+option go_package = "github.com/SmartDoge/smartdoge/x/evm/types";
 
 // Params defines the EVM module parameters
 message Params {

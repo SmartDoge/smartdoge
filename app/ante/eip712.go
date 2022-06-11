@@ -13,20 +13,20 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/legacy/legacytx"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
 
+	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
+	"github.com/SmartDoge/smartdoge/ethereum/eip712"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
-	"github.com/tharsis/ethermint/crypto/ethsecp256k1"
-	"github.com/tharsis/ethermint/ethereum/eip712"
-	ethermint "github.com/tharsis/ethermint/types"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
-var ethermintCodec codec.ProtoCodecMarshaler
+var smartdogeCodec codec.ProtoCodecMarshaler
 
 func init() {
 	registry := codectypes.NewInterfaceRegistry()
-	ethermint.RegisterInterfaces(registry)
-	ethermintCodec = codec.NewProtoCodec(registry)
+	smartdoge.RegisterInterfaces(registry)
+	smartdogeCodec = codec.NewProtoCodec(registry)
 }
 
 // Eip712SigVerificationDecorator Verify all signatures for a tx and return an error if any are invalid. Note,
@@ -174,7 +174,7 @@ func VerifySignature(
 			msgs, tx.GetMemo(),
 		)
 
-		signerChainID, err := ethermint.ParseChainID(signerData.ChainID)
+		signerChainID, err := smartdoge.ParseChainID(signerData.ChainID)
 		if err != nil {
 			return sdkerrors.Wrapf(err, "failed to parse chainID: %s", signerData.ChainID)
 		}
@@ -188,13 +188,13 @@ func VerifySignature(
 			return sdkerrors.Wrap(sdkerrors.ErrUnknownExtensionOptions, "tx doesnt contain expected amount of extension options")
 		}
 
-		var optIface ethermint.ExtensionOptionsWeb3TxI
+		var optIface smartdoge.ExtensionOptionsWeb3TxI
 
-		if err := ethermintCodec.UnpackAny(opts[0], &optIface); err != nil {
+		if err := smartdogeCodec.UnpackAny(opts[0], &optIface); err != nil {
 			return sdkerrors.Wrap(err, "failed to proto-unpack ExtensionOptionsWeb3Tx")
 		}
 
-		extOpt, ok := optIface.(*ethermint.ExtensionOptionsWeb3Tx)
+		extOpt, ok := optIface.(*smartdoge.ExtensionOptionsWeb3Tx)
 		if !ok {
 			return sdkerrors.Wrap(sdkerrors.ErrInvalidChainID, "unknown extension option")
 		}
@@ -215,7 +215,7 @@ func VerifySignature(
 			FeePayer: feePayer,
 		}
 
-		typedData, err := eip712.WrapTxToTypedData(ethermintCodec, extOpt.TypedDataChainID, msgs[0], txBytes, feeDelegation)
+		typedData, err := eip712.WrapTxToTypedData(smartdogeCodec, extOpt.TypedDataChainID, msgs[0], txBytes, feeDelegation)
 		if err != nil {
 			return sdkerrors.Wrap(err, "failed to pack tx data in EIP712 object")
 		}

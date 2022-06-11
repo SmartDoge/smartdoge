@@ -17,7 +17,7 @@ import (
 
 	grpctypes "github.com/cosmos/cosmos-sdk/types/grpc"
 
-	ethermint "github.com/tharsis/ethermint/types"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
 )
 
 // BlockNumber represents decoding hex string to block values
@@ -181,7 +181,7 @@ func (bnh *BlockNumberOrHash) decodeFromString(input string) error {
 			return err
 		}
 
-		bnInt, err := ethermint.SafeInt64(blockNumber)
+		bnInt, err := smartdoge.SafeInt64(blockNumber)
 		if err != nil {
 			return err
 		}

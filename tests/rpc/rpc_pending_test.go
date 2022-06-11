@@ -1,6 +1,6 @@
-// This is a test utility for Ethermint's Web3 JSON-RPC services.
+// This is a test utility for SmartDoge's Web3 JSON-RPC services.
 //
-// To run these tests please first ensure you have the ethermintd running
+// To run these tests please first ensure you have the smartdoged running
 //
 // You can configure the desired HOST and MODE as well in integration-test-all.sh
 package rpc
@@ -16,7 +16,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/stretchr/testify/require"
 
-	rpctypes "github.com/tharsis/ethermint/rpc/types"
+	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
 )
 
 // func TestMain(m *testing.M) {
@@ -38,7 +38,7 @@ import (
 // }
 
 func TestEth_Pending_GetBalance(t *testing.T) {
-	// There is no pending block concept in Ethermint
+	// There is no pending block concept in SmartDoge
 	t.Skip("skipping TestEth_Pending_GetBalance")
 
 	var res hexutil.Big
@@ -126,7 +126,7 @@ func TestEth_Pending_GetTransactionCount(t *testing.T) {
 }
 
 func TestEth_Pending_GetBlockTransactionCountByNumber(t *testing.T) {
-	// There is no pending block concept in Ethermint
+	// There is no pending block concept in SmartDoge
 	t.Skip("skipping TestEth_Pending_GetBlockTransactionCountByNumber")
 
 	rpcRes := Call(t, "eth_getBlockTransactionCountByNumber", []interface{}{"pending"})
@@ -175,7 +175,7 @@ func TestEth_Pending_GetBlockTransactionCountByNumber(t *testing.T) {
 }
 
 func TestEth_Pending_GetBlockByNumber(t *testing.T) {
-	// There is no pending block concept in Ethermint
+	// There is no pending block concept in SmartDoge
 	t.Skip("skipping TestEth_Pending_GetBlockByNumber")
 
 	rpcRes := Call(t, "eth_getBlockByNumber", []interface{}{"latest", true})
@@ -221,7 +221,7 @@ func TestEth_Pending_GetBlockByNumber(t *testing.T) {
 }
 
 func TestEth_Pending_GetTransactionByBlockNumberAndIndex(t *testing.T) {
-	// There is no pending block concept in Ethermint
+	// There is no pending block concept in SmartDoge
 	t.Skip("skipping TestEth_Pending_GetTransactionByBlockNumberAndIndex")
 
 	var pendingTx []*rpctypes.RPCTransaction

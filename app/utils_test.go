@@ -8,16 +8,16 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
-	"github.com/tharsis/ethermint/crypto/ethsecp256k1"
-	ethermint "github.com/tharsis/ethermint/types"
+	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -38,7 +38,7 @@ func TestRandomGenesisAccounts(t *testing.T) {
 	subSpace, find := paramsKeeper.GetSubspace(authtypes.ModuleName)
 	require.True(t, find)
 	accountKeeper := authkeeper.NewAccountKeeper(
-		appCodec, sdk.NewKVStoreKey(authtypes.StoreKey), subSpace, ethermint.ProtoAccount, maccPerms,
+		appCodec, sdk.NewKVStoreKey(authtypes.StoreKey), subSpace, smartdoge.ProtoAccount, maccPerms,
 	)
 	authModule := auth.NewAppModule(appCodec, accountKeeper, RandomGenesisAccounts)
 
@@ -54,7 +54,7 @@ func TestRandomGenesisAccounts(t *testing.T) {
 	accounts, err := authtypes.UnpackAccounts(authState.Accounts)
 	require.NoError(t, err)
 	for _, acc := range accounts {
-		_, ok := acc.(ethermint.EthAccountI)
+		_, ok := acc.(smartdoge.EthAccountI)
 		require.True(t, ok)
 	}
 }
@@ -74,7 +74,7 @@ func TestStateFn(t *testing.T) {
 		require.NoError(t, os.RemoveAll(dir))
 	}()
 
-	app := NewEthermintApp(logger, db, nil, true, map[int64]bool{}, DefaultNodeHome, simapp.FlagPeriodValue, MakeEncodingConfig(), simapp.EmptyAppOptions{}, fauxMerkleModeOpt)
+	app := NewSmartDogeApp(logger, db, nil, true, map[int64]bool{}, DefaultNodeHome, simapp.FlagPeriodValue, MakeEncodingConfig(), simapp.EmptyAppOptions{}, fauxMerkleModeOpt)
 	require.Equal(t, appName, app.Name())
 
 	appStateFn := StateFn(app.AppCodec(), app.SimulationManager())

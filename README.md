@@ -4,41 +4,41 @@ parent:
 -->
 
 <div align="center">
-  <h1> Ethermint </h1>
+  <h1> SmartDoge </h1>
 </div>
 
-![banner](docs/ethermint.jpg)
+![banner](docs/smartdoge.jpg)
 
 <div align="center">
-  <a href="https://github.com/tharsis/ethermint/releases/latest">
-    <img alt="Version" src="https://img.shields.io/github/tag/tharsis/ethermint.svg" />
+  <a href="https://github.com/SmartDoge/smartdoge/releases/latest">
+    <img alt="Version" src="https://img.shields.io/github/tag/tharsis/smartdoge.svg" />
   </a>
-  <a href="https://github.com/tharsis/ethermint/blob/main/LICENSE">
-    <img alt="License: Apache-2.0" src="https://img.shields.io/github/license/tharsis/ethermint.svg" />
+  <a href="https://github.com/SmartDoge/smartdoge/blob/main/LICENSE">
+    <img alt="License: Apache-2.0" src="https://img.shields.io/github/license/tharsis/smartdoge.svg" />
   </a>
-  <a href="https://pkg.go.dev/github.com/tharsis/ethermint">
-    <img alt="GoDoc" src="https://godoc.org/github.com/tharsis/ethermint?status.svg" />
+  <a href="https://pkg.go.dev/github.com/SmartDoge/smartdoge">
+    <img alt="GoDoc" src="https://godoc.org/github.com/SmartDoge/smartdoge?status.svg" />
   </a>
-  <a href="https://goreportcard.com/report/github.com/tharsis/ethermint">
-    <img alt="Go report card" src="https://goreportcard.com/badge/github.com/tharsis/ethermint"/>
+  <a href="https://goreportcard.com/report/github.com/SmartDoge/smartdoge">
+    <img alt="Go report card" src="https://goreportcard.com/badge/github.com/SmartDoge/smartdoge"/>
   </a>
   <a href="https://bestpractices.coreinfrastructure.org/projects/5018">
-    <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/tharsis/ethermint">
+    <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/tharsis/smartdoge">
   </a>
 </div>
 <div align="center">
   <a href="https://discord.gg/trje9XuAmy">
     <img alt="Discord" src="https://img.shields.io/discord/809048090249134080.svg" />
   </a>
-  <a href="https://github.com/tharsis/ethermint/actions?query=branch%3Amain+workflow%3ALint">
-    <img alt="Lint Status" src="https://github.com/tharsis/ethermint/actions/workflows/lint.yml/badge.svg?branch=main" />
+  <a href="https://github.com/SmartDoge/smartdoge/actions?query=branch%3Amain+workflow%3ALint">
+    <img alt="Lint Status" src="https://github.com/SmartDoge/smartdoge/actions/workflows/lint.yml/badge.svg?branch=main" />
   </a>
-  <a href="https://codecov.io/gh/tharsis/ethermint">
-    <img alt="Code Coverage" src="https://codecov.io/gh/tharsis/ethermint/branch/main/graph/badge.svg" />
+  <a href="https://codecov.io/gh/tharsis/smartdoge">
+    <img alt="Code Coverage" src="https://codecov.io/gh/tharsis/smartdoge/branch/main/graph/badge.svg" />
   </a>
 </div>
 
-Ethermint is a scalable and interoperable Ethereum library, built on Proof-of-Stake with fast-finality using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) which runs on top of [Tendermint Core](https://github.com/tendermint/tendermint) consensus engine.
+SmartDoge is a scalable and interoperable Ethereum library, built on Proof-of-Stake with fast-finality using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) which runs on top of [Tendermint Core](https://github.com/tendermint/tendermint) consensus engine.
 
 **Note**: Requires [Go 1.17+](https://golang.org/dl/)
 
@@ -50,17 +50,17 @@ For prerequisites and detailed build instructions please read the Evmos [Install
 make install
 ```
 
-Or check out the latest [release](https://github.com/tharsis/ethermint/releases).
+Or check out the latest [release](https://github.com/SmartDoge/smartdoge/releases).
 
 ## Quick Start
 
-To learn how the Ethermint works from a high-level perspective, go to the [Introduction](https://evmos.dev/intro/overview.html) section from the documentation. You can also check the instructions to [Run a Node](https://evmos.dev/quickstart/run_node.html).
+To learn how the SmartDoge works from a high-level perspective, go to the [Introduction](https://evmos.dev/intro/overview.html) section from the documentation. You can also check the instructions to [Run a Node](https://evmos.dev/quickstart/run_node.html).
 
-For an example on how Ethermint can be used on any Cosmos-SDK chain, please refer to [Evmos](https://www.github.com/tharsis/evmos).
+For an example on how SmartDoge can be used on any Cosmos-SDK chain, please refer to [Evmos](https://www.github.com/tharsis/evmos).
 
 ## Community
 
-The following chat channels and forums are a great spot to ask questions about Ethermint:
+The following chat channels and forums are a great spot to ask questions about SmartDoge:
 
 - [Evmos Twitter](https://twitter.com/EvmosOrg)
 - [Evmos Discord](https://discord.gg/trje9XuAmy)
@@ -69,7 +69,7 @@ The following chat channels and forums are a great spot to ask questions about E
 
 ## Contributing
 
-Looking for a good place to start contributing? Check out some [`good first issues`](https://github.com/tharsis/ethermint/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+Looking for a good place to start contributing? Check out some [`good first issues`](https://github.com/SmartDoge/smartdoge/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 For additional instructions, standards and style guides, please refer to the [Contributing](./CONTRIBUTING.md) document.
 

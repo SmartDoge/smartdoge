@@ -8,6 +8,12 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
+	"github.com/SmartDoge/smartdoge/app"
+	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
+	"github.com/SmartDoge/smartdoge/encoding"
+	"github.com/SmartDoge/smartdoge/tests"
+	"github.com/SmartDoge/smartdoge/testutil"
+	"github.com/SmartDoge/smartdoge/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
@@ -17,22 +23,16 @@ import (
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/tharsis/ethermint/app"
-	"github.com/tharsis/ethermint/crypto/ethsecp256k1"
-	"github.com/tharsis/ethermint/encoding"
-	"github.com/tharsis/ethermint/tests"
-	"github.com/tharsis/ethermint/testutil"
-	"github.com/tharsis/ethermint/x/feemarket/types"
 
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/simapp"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
-var _ = Describe("Ethermint App min gas prices settings: ", func() {
+var _ = Describe("SmartDoge App min gas prices settings: ", func() {
 	var (
 		privKey *ethsecp256k1.PrivKey
 		address sdk.AccAddress
@@ -43,7 +43,7 @@ var _ = Describe("Ethermint App min gas prices settings: ", func() {
 		// Initialize the app, so we can use SetMinGasPrices to set the
 		// validator-specific min-gas-prices setting
 		db := dbm.NewMemDB()
-		newapp := app.NewEthermintApp(
+		newapp := app.NewSmartDogeApp(
 			log.NewNopLogger(),
 			db,
 			nil,
@@ -65,7 +65,7 @@ var _ = Describe("Ethermint App min gas prices settings: ", func() {
 		// Initialize the chain
 		newapp.InitChain(
 			abci.RequestInitChain{
-				ChainId:         "ethermint_9000-1",
+				ChainId:         "smartdoge_9000-1",
 				Validators:      []abci.ValidatorUpdate{},
 				AppStateBytes:   stateBytes,
 				ConsensusParams: app.DefaultConsensusParams,

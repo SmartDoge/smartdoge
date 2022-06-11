@@ -12,7 +12,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 
-	ethermint "github.com/tharsis/ethermint/types"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
 )
 
 // InitConfig adds the chain-id, encoding and output flags to the persistent flag set.
@@ -26,7 +26,7 @@ func InitConfig(cmd *cobra.Command) error {
 	_, err = os.Stat(configFile)
 	if err != nil && !os.IsNotExist(err) {
 		// Immediately return if the error isn't related to the file not existing.
-		// See issue https://github.com/tharsis/ethermint/issues/539
+		// See issue https://github.com/SmartDoge/smartdoge/issues/539
 		return err
 	}
 	if err == nil {
@@ -57,7 +57,7 @@ func ValidateChainID(baseCmd *cobra.Command) *cobra.Command {
 	validateFn := func(cmd *cobra.Command, args []string) error {
 		chainID, _ := cmd.Flags().GetString(flags.FlagChainID)
 
-		if !ethermint.IsValidChainID(chainID) {
+		if !smartdoge.IsValidChainID(chainID) {
 			return fmt.Errorf("invalid chain-id format: %s", chainID)
 		}
 

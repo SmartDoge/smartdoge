@@ -7,13 +7,13 @@ import (
 	"math/big"
 	"testing"
 
+	"github.com/SmartDoge/smartdoge/rpc/types"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
-	"github.com/tharsis/ethermint/rpc/types"
 
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
 	// . "github.com/onsi/ginkgo/v2"
 	// . "github.com/onsi/gomega"
@@ -28,9 +28,9 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient/gethclient"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/tharsis/ethermint/server/config"
-	"github.com/tharsis/ethermint/testutil/network"
-	ethermint "github.com/tharsis/ethermint/types"
+	"github.com/SmartDoge/smartdoge/server/config"
+	"github.com/SmartDoge/smartdoge/testutil/network"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
 )
 
 // var _ = Describe("E2e", func() {
@@ -83,7 +83,7 @@ func (s *IntegrationTestSuite) SetupSuite() {
 	s.rpcClient = rpcClient
 	s.gethClient = gethclient.New(rpcClient)
 	s.Require().NotNil(s.gethClient)
-	chainId, err := ethermint.ParseChainID(s.cfg.ChainID)
+	chainId, err := smartdoge.ParseChainID(s.cfg.ChainID)
 	s.Require().NoError(err)
 	s.ethSigner = ethtypes.LatestSignerForChainID(chainId)
 }
@@ -98,9 +98,9 @@ func (s *IntegrationTestSuite) TestChainID() {
 
 	s.T().Log(chainID.Int64())
 
-	eip155ChainID, err := ethermint.ParseChainID(s.network.Config.ChainID)
+	eip155ChainID, err := smartdoge.ParseChainID(s.network.Config.ChainID)
 	s.Require().NoError(err)
-	eip155ChainIDGen, err := ethermint.ParseChainID(genesisRes.Genesis.ChainID)
+	eip155ChainIDGen, err := smartdoge.ParseChainID(genesisRes.Genesis.ChainID)
 	s.Require().NoError(err)
 
 	s.Require().Equal(chainID, eip155ChainID)

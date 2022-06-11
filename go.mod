@@ -1,4 +1,4 @@
-module github.com/tharsis/ethermint
+module github.com/SmartDoge/smartdoge
 
 go 1.17
 

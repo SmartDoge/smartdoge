@@ -15,10 +15,10 @@ IP_ADDR="0.0.0.0"
 MODE="rpc"
 
 KEY="mykey"
-CHAINID="ethermint_9000-1"
+CHAINID="smartdoge_9000-1"
 MONIKER="mymoniker"
 
-## default port prefixes for ethermintd
+## default port prefixes for smartdoged
 NODE_P2P_PORT="2660"
 NODE_PORT="2663"
 NODE_RPC_PORT="2666"
@@ -47,23 +47,23 @@ done
 
 set -euxo pipefail
 
-DATA_DIR=$(mktemp -d -t ethermint_9000-datadir.XXXXX)
+DATA_DIR=$(mktemp -d -t smartdoge_9000-datadir.XXXXX)
 
 if [[ ! "$DATA_DIR" ]]; then
     echo "Could not create $DATA_DIR"
     exit 1
 fi
 
-DATA_CLI_DIR=$(mktemp -d -t ethermint_9000-cli-datadir.XXXXX)
+DATA_CLI_DIR=$(mktemp -d -t smartdoge_9000-cli-datadir.XXXXX)
 
 if [[ ! "$DATA_CLI_DIR" ]]; then
     echo "Could not create $DATA_CLI_DIR"
     exit 1
 fi
 
-# Compile ethermint
-echo "compiling ethermint"
-make build-ethermint
+# Compile smartdoge
+echo "compiling smartdoge"
+make build-smartdoge
 
 # PID array declaration
 arr=()
@@ -73,33 +73,33 @@ arrcli=()
 
 init_func() {
     echo "create and add new keys"
-    "$PWD"/build/ethermintd keys add $KEY"$i" --home "$DATA_DIR$i" --no-backup --chain-id $CHAINID --algo "eth_secp256k1" --keyring-backend test
-    echo "init Ethermint with moniker=$MONIKER and chain-id=$CHAINID"
-    "$PWD"/build/ethermintd init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
+    "$PWD"/build/smartdoged keys add $KEY"$i" --home "$DATA_DIR$i" --no-backup --chain-id $CHAINID --algo "eth_secp256k1" --keyring-backend test
+    echo "init SmartDoge with moniker=$MONIKER and chain-id=$CHAINID"
+    "$PWD"/build/smartdoged init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
     echo "prepare genesis: Allocate genesis accounts"
-    "$PWD"/build/ethermintd add-genesis-account \
-    "$("$PWD"/build/ethermintd keys show "$KEY$i" -a --home "$DATA_DIR$i" --keyring-backend test)" 1000000000000000000wei \
+    "$PWD"/build/smartdoged add-genesis-account \
+    "$("$PWD"/build/smartdoged keys show "$KEY$i" -a --home "$DATA_DIR$i" --keyring-backend test)" 1000000000000000000wei \
     --home "$DATA_DIR$i" --keyring-backend test
     echo "prepare genesis: Sign genesis transaction"
-    "$PWD"/build/ethermintd gentx $KEY"$i" 1000000000000000000wei --keyring-backend test --home "$DATA_DIR$i" --keyring-backend test --chain-id $CHAINID
+    "$PWD"/build/smartdoged gentx $KEY"$i" 1000000000000000000wei --keyring-backend test --home "$DATA_DIR$i" --keyring-backend test --chain-id $CHAINID
     echo "prepare genesis: Collect genesis tx"
-    "$PWD"/build/ethermintd collect-gentxs --home "$DATA_DIR$i"
+    "$PWD"/build/smartdoged collect-gentxs --home "$DATA_DIR$i"
     echo "prepare genesis: Run validate-genesis to ensure everything worked and that the genesis file is setup correctly"
-    "$PWD"/build/ethermintd validate-genesis --home "$DATA_DIR$i"
+    "$PWD"/build/smartdoged validate-genesis --home "$DATA_DIR$i"
 }
 
 start_func() {
-    echo "starting ethermint node $i in background ..."
-    "$PWD"/build/ethermintd start --pruning=nothing --rpc.unsafe \
+    echo "starting smartdoge node $i in background ..."
+    "$PWD"/build/smartdoged start --pruning=nothing --rpc.unsafe \
     --p2p.laddr tcp://$IP_ADDR:$NODE_P2P_PORT"$i" --address tcp://$IP_ADDR:$NODE_PORT"$i" --rpc.laddr tcp://$IP_ADDR:$NODE_RPC_PORT"$i" \
     --json-rpc.address=$IP_ADDR:$RPC_PORT"$i" \
     --keyring-backend test --home "$DATA_DIR$i" \
     >"$DATA_DIR"/node"$i".log 2>&1 & disown
 
-    ETHERMINT_PID=$!
-    echo "started ethermint node, pid=$ETHERMINT_PID"
+    SMARTDOGE_PID=$!
+    echo "started smartdoge node, pid=$SMARTDOGE_PID"
     # add PID to array
-    arr+=("$ETHERMINT_PID")
+    arr+=("$SMARTDOGE_PID")
 }
 
 # Run node with static blockchain database
@@ -123,7 +123,7 @@ if [[ -z $TEST || $TEST == "rpc" ]]; then
 
     for i in $(seq 1 "$TEST_QTD"); do
         HOST_RPC=http://$IP_ADDR:$RPC_PORT"$i"
-        echo "going to test ethermint node $HOST_RPC ..."
+        echo "going to test smartdoge node $HOST_RPC ..."
         MODE=$MODE HOST=$HOST_RPC go test ./tests/e2e/... -timeout=300s -v -short
         MODE=$MODE HOST=$HOST_RPC go test ./tests/rpc/... -timeout=300s -v -short
 
@@ -133,12 +133,12 @@ if [[ -z $TEST || $TEST == "rpc" ]]; then
 fi
 
 stop_func() {
-    ETHERMINT_PID=$i
-    echo "shutting down node, pid=$ETHERMINT_PID ..."
+    SMARTDOGE_PID=$i
+    echo "shutting down node, pid=$SMARTDOGE_PID ..."
 
-    # Shutdown ethermint node
-    kill -9 "$ETHERMINT_PID"
-    wait "$ETHERMINT_PID"
+    # Shutdown smartdoge node
+    kill -9 "$SMARTDOGE_PID"
+    wait "$SMARTDOGE_PID"
 }
 
 
