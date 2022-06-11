@@ -131,29 +131,49 @@ var (
 	// non-dependant module elements, such as codec registration
 	// and genesis verification.
 	ModuleBasics = module.NewBasicManager(
+		// Defines basic tx/acct types and contains handler for basic tx validity checks.
 		auth.AppModuleBasic{},
+		// Genesis untility functionality.
 		genutil.AppModuleBasic{},
+		// Handles transfers of coins between accounts, multi-asset support, and support for "module" accounts.
 		bank.AppModuleBasic{},
+		// Codifies multi-owner capabilities as per the object-capability model described in the Cosmos SDK docs.
 		capability.AppModuleBasic{},
+		// Implements PoS with validation and delegation.
 		staking.AppModuleBasic{},
+		// Provides for token minting to generate inflation that respects a certain bonded-stake ratio.
 		mint.AppModuleBasic{},
+		// A "simple" (see docs) model for rewarding validators and delegators for staking.
 		distr.AppModuleBasic{},
+		// Enables on-chain governance, where holders can submit proposals, vote, etc.
 		gov.NewAppModuleBasic(
 			paramsclient.ProposalHandler, distrclient.ProposalHandler, upgradeclient.ProposalHandler, upgradeclient.CancelProposalHandler,
 			ibcclientclient.UpdateClientProposalHandler, ibcclientclient.UpgradeProposalHandler,
 		),
+		// Provides a framework for passing parameters to modules.
 		params.AppModuleBasic{},
+		// Enables "invariants": values that are calculated at runtime and which should always evaluate to the same result.
+		// If an invariant evaluates to a different result the chain is halted.
 		crisis.AppModuleBasic{},
+		// Allows the definition of actions which result in either the burning of staked coin or the revocation of voting rights.
 		slashing.AppModuleBasic{},
+		// Enables Inter-Blockchain Communication
 		ibc.AppModuleBasic{},
+
 		authzmodule.AppModuleBasic{},
+		// Allows an account to allow another account to spend a predetermined amount of its balance on transaction fees.
 		feegrantmodule.AppModuleBasic{},
+		// Allows the definition of a block height at which a node must upgrade to a new version before continuing.
 		upgrade.AppModuleBasic{},
+		// Provides data structures for users to submit arbitrary evidence of misbehaviour.
 		evidence.AppModuleBasic{},
+		// Appears to be related to IBC and was extracted from the IBC module for cleanliness: https://github.com/cosmos/cosmos-sdk/issues/6092
 		transfer.AppModuleBasic{},
+		// Not listed as a module in the docs and not in the `x` directory of the Cosmos SDK source.
 		vesting.AppModuleBasic{},
 		// Ethermint modules
 		evm.AppModuleBasic{},
+		// Fee market functionality as described in https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md
 		feemarket.AppModuleBasic{},
 	)
 

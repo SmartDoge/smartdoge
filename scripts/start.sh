@@ -78,10 +78,10 @@ init_func() {
     "$PWD"/build/ethermintd init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
     echo "prepare genesis: Allocate genesis accounts"
     "$PWD"/build/ethermintd add-genesis-account \
-    "$("$PWD"/build/ethermintd keys show "$KEY$i" -a --home "$DATA_DIR$i" --keyring-backend test)" 1000000000000000000aphoton,1000000000000000000stake \
+    "$("$PWD"/build/ethermintd keys show "$KEY$i" -a --home "$DATA_DIR$i" --keyring-backend test)" 1000000000000000000wei \
     --home "$DATA_DIR$i" --keyring-backend test
     echo "prepare genesis: Sign genesis transaction"
-    "$PWD"/build/ethermintd gentx $KEY"$i" 1000000000000000000stake --keyring-backend test --home "$DATA_DIR$i" --keyring-backend test --chain-id $CHAINID
+    "$PWD"/build/ethermintd gentx $KEY"$i" 1000000000000000000wei --keyring-backend test --home "$DATA_DIR$i" --keyring-backend test --chain-id $CHAINID
     echo "prepare genesis: Collect genesis tx"
     "$PWD"/build/ethermintd collect-gentxs --home "$DATA_DIR$i"
     echo "prepare genesis: Run validate-genesis to ensure everything worked and that the genesis file is setup correctly"
@@ -95,7 +95,7 @@ start_func() {
     --json-rpc.address=$IP_ADDR:$RPC_PORT"$i" \
     --keyring-backend test --home "$DATA_DIR$i" \
     >"$DATA_DIR"/node"$i".log 2>&1 & disown
-    
+
     ETHERMINT_PID=$!
     echo "started ethermint node, pid=$ETHERMINT_PID"
     # add PID to array
@@ -120,7 +120,7 @@ echo "done sleeping"
 set +e
 
 if [[ -z $TEST || $TEST == "rpc" ]]; then
-    
+
     for i in $(seq 1 "$TEST_QTD"); do
         HOST_RPC=http://$IP_ADDR:$RPC_PORT"$i"
         echo "going to test ethermint node $HOST_RPC ..."
@@ -129,13 +129,13 @@ if [[ -z $TEST || $TEST == "rpc" ]]; then
 
         TEST_FAIL=$?
     done
-    
+
 fi
 
 stop_func() {
     ETHERMINT_PID=$i
     echo "shutting down node, pid=$ETHERMINT_PID ..."
-    
+
     # Shutdown ethermint node
     kill -9 "$ETHERMINT_PID"
     wait "$ETHERMINT_PID"
