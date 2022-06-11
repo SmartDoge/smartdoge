@@ -10,10 +10,10 @@ The `x/evm` module is responsible for executing Ethereum Virtual Machine (EVM) s
    import (
       "github.com/cosmos/cosmos-sdk/x/auth"
       "github.com/cosmos/cosmos-sdk/x/bank"
-
-      "github.com/SmartDoge/smartdoge/app/ante"
-      smartdoge "github.com/SmartDoge/smartdoge/types"
-      "github.com/SmartDoge/smartdoge/x/evm"
+       
+      "github.com/tharsis/ethermint/app/ante"
+      ethermint "github.com/tharsis/ethermint/types"
+      "github.com/tharsis/ethermint/x/evm"
    )
    ```
 
@@ -37,13 +37,13 @@ The `x/evm` module is responsible for executing Ethereum Virtual Machine (EVM) s
    }
    ```
 
-4. Define the SmartDoge `ProtoAccount` for the `AccountKeeper`
+4. Define the Ethermint `ProtoAccount` for the `AccountKeeper`
 
    ```go
    func NewApp(...) *App {
       // ...
         app.AccountKeeper = auth.NewAccountKeeper(
-            cdc, keys[auth.StoreKey], app.subspaces[auth.ModuleName], smartdoge.ProtoAccount,
+            cdc, keys[auth.StoreKey], app.subspaces[auth.ModuleName], ethermint.ProtoAccount,
         )
    }
    ```
@@ -92,7 +92,7 @@ The `x/evm` module is responsible for executing Ethereum Virtual Machine (EVM) s
     }
     ```
 
-9. Set the SmartDoge `AnteHandler` to support EVM transactions. Note,
+9. Set the Ethermint `AnteHandler` to support EVM transactions. Note,
 the default `AnteHandler` provided by the `x/evm` module depends on the `x/auth` and `x/supply`
 modules.
 
@@ -174,8 +174,8 @@ type Params struct {
 
 ### JSON-RPC
 
-See the SmartDoge [JSON-RPC docs](https://evmos.dev/basics/json_rpc.html) for reference.
+See the Ethermint [JSON-RPC docs](https://evmos.dev/basics/json_rpc.html) for reference.
 
 ## Documentation and Specification
 
-* SmartDoge documentation: [https://evmos.dev](https://evmos.dev)
+* Ethermint documentation: [https://evmos.dev](https://evmos.dev)

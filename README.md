@@ -6,6 +6,12 @@
 make install
 ```
 
+## Completely reset the environment
+
+```bash
+rm -rf ~/.smartdoged*
+```
+
 ## Reset a node
 
 The following script resets a node but retains its validator keys in `priv_validator.json` and node config in `config.toml`.
@@ -31,6 +37,13 @@ KEY=validator
 # Must follow the pattern [letters]_[eis]-[epoch]
 CHAINID=smartdoge_420-1
 
+KEYRING="test"
+KEYALGO="eth_secp256k1"
+LOGLEVEL="info"
+# to trace evm
+TRACE="--trace"
+# TRACE=""
+
 # Init the node with default config
 smartdoged init $MONIKER --chain-id=$CHAINID
 
@@ -50,7 +63,7 @@ fi
 smartdoged config chain-id $CHAINID
 
 # Set the keyring backend to test, which writes keys to an unencrypted file in ~
-smartdoged config keyring-backend "test"
+smartdoged config keyring-backend $KEYRING --algo $KEYALGO
 
 # Create a key
 smartdoged keys add $KEY
@@ -67,8 +80,8 @@ smartdoged collect-gentxs
 # Validatate genesis.json
 smartdoged validate-genesis
 
-# Run the node
-smartdoged start
+# Start the node (remove the --pruning=nothing flag if historical queries are not needed)
+smartdoged start --pruning=nothing --evm.tracer=json $TRACE --log_level $LOGLEVEL --minimum-gas-prices=0.0001wei --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
 ```
 
 ## Query the testnet
