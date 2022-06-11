@@ -126,7 +126,7 @@ docker-build:
 	# update old container
 	docker rm smartdoge || true
 	# create a new container from the latest image
-	docker create --name smartdoge -t -i tharsis/smartdoge:latest smartdoge
+	docker create --name smartdoge -t -i smartdoge/smartdoge:latest smartdoge
 	# move the binaries to the ./build directory
 	mkdir -p ./build/
 	docker cp smartdoge:/usr/bin/smartdoged ./build/
