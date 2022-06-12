@@ -14,7 +14,7 @@ import (
 
 	"github.com/SmartDoge/smartdoge/encoding"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"

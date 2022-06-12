@@ -16,9 +16,9 @@ import (
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/SmartDoge/smartdoge/ethereum/eip712"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 var smartdogeCodec codec.ProtoCodecMarshaler

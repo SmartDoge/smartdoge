@@ -23,7 +23,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/SmartDoge/smartdoge/rpc/ethereum/pubsub"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 var (

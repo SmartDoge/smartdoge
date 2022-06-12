@@ -8,13 +8,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	smartdoge "github.com/SmartDoge/smartdoge/types"

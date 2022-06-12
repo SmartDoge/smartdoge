@@ -8,8 +8,8 @@ import (
 	"github.com/SmartDoge/smartdoge/app/ante"
 	"github.com/SmartDoge/smartdoge/server/config"
 	"github.com/SmartDoge/smartdoge/tests"
-	"github.com/SmartDoge/smartdoge/x/evm/statedb"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	"github.com/tharsis/ethermint/x/evm/statedb"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )

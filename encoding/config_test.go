@@ -11,7 +11,7 @@ import (
 	"github.com/SmartDoge/smartdoge/app"
 	"github.com/SmartDoge/smartdoge/encoding"
 	"github.com/SmartDoge/smartdoge/tests"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 func TestTxEncoding(t *testing.T) {

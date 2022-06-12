@@ -41,7 +41,7 @@ import (
 	"github.com/SmartDoge/smartdoge/server/config"
 	srvflags "github.com/SmartDoge/smartdoge/server/flags"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
 	"github.com/SmartDoge/smartdoge/testutil/network"
 )

@@ -5,10 +5,10 @@ import (
 
 	"github.com/SmartDoge/smartdoge/app/ante"
 	"github.com/SmartDoge/smartdoge/tests"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 func (suite AnteTestSuite) TestGasWantedDecorator() {

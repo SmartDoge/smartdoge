@@ -10,9 +10,9 @@ import (
 	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	evmkeeper "github.com/SmartDoge/smartdoge/x/evm/keeper"
-	"github.com/SmartDoge/smartdoge/x/evm/statedb"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmkeeper "github.com/tharsis/ethermint/x/evm/keeper"
+	"github.com/tharsis/ethermint/x/evm/statedb"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"

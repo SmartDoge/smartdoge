@@ -29,7 +29,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
 	"github.com/SmartDoge/smartdoge/server"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 func startInProcess(cfg Config, val *Validator) error {

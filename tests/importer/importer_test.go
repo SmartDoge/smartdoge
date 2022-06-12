@@ -16,8 +16,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	evmkeeper "github.com/SmartDoge/smartdoge/x/evm/keeper"
-	"github.com/SmartDoge/smartdoge/x/evm/statedb"
+	evmkeeper "github.com/tharsis/ethermint/x/evm/keeper"
+	"github.com/tharsis/ethermint/x/evm/statedb"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/consensus/ethash"

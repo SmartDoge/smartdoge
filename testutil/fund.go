@@ -1,9 +1,9 @@
 package testutil
 
 import (
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 // FundAccount is a utility function that funds an account by minting and

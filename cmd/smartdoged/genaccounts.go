@@ -22,7 +22,7 @@ import (
 
 	"github.com/SmartDoge/smartdoge/crypto/hd"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 const (

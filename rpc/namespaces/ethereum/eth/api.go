@@ -39,7 +39,7 @@ import (
 	"github.com/SmartDoge/smartdoge/rpc/backend"
 	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 // PublicAPI is the eth_ prefixed set of APIs in the Web3 JSON-RPC spec.

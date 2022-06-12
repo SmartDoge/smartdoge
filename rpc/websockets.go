@@ -30,7 +30,7 @@ import (
 	rpcfilters "github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/eth/filters"
 	"github.com/SmartDoge/smartdoge/rpc/types"
 	"github.com/SmartDoge/smartdoge/server/config"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 )
 
 type WebsocketsServer interface {

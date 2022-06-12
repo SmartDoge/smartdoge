@@ -9,7 +9,7 @@ make install
 ## Completely reset the environment
 
 ```bash
-rm -rf ~/.smartdoged*
+rm -rf ~/.smartdogesd*
 ```
 
 ## Reset a node
@@ -38,11 +38,10 @@ KEY=validator
 CHAINID=smartdoge_420-1
 
 KEYRING="test"
-KEYALGO="eth_secp256k1"
 LOGLEVEL="info"
-# to trace evm
-TRACE="--trace"
-# TRACE=""
+# Switch the commented lines to enable EVM tracing
+# TRACE="--trace"
+TRACE=""
 
 # Init the node with default config
 smartdoged init $MONIKER --chain-id=$CHAINID
@@ -63,16 +62,16 @@ fi
 smartdoged config chain-id $CHAINID
 
 # Set the keyring backend to test, which writes keys to an unencrypted file in ~
-smartdoged config keyring-backend $KEYRING --algo $KEYALGO
+smartdoged config keyring-backend $KEYRING
 
 # Create a key
 smartdoged keys add $KEY
 
-# Add a genesis account with the amount of staked currency and the amount of wallet currency
-smartdoged add-genesis-account $(smartdoged keys show $KEY -a) 1000000000000000000000000wei # 1 billion SDOGE
+# Add a genesis account with 1 billion SDOGE
+smartdoged add-genesis-account $(smartdoged keys show $KEY -a) 1000000000000000000000000wei
 
-# Create the genesis transaction to stake
-smartdoged gentx $KEY 1000000000000000000wei --chain-id $CHAINID # Stake 1 SDOGE
+# Create the genesis transaction to stake 1 SDOGE
+smartdoged gentx $KEY 1000000000000000000wei --chain-id $CHAINID
 
 # Collect all genesis transactions into the genesis.json config
 smartdoged collect-gentxs

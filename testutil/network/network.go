@@ -52,7 +52,7 @@ import (
 	"github.com/SmartDoge/smartdoge/encoding"
 	"github.com/SmartDoge/smartdoge/server/config"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
+	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
 	"github.com/SmartDoge/smartdoge/app"
 )
