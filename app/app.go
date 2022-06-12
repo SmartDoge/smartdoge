@@ -96,9 +96,9 @@ import (
 	// unnamed import of statik for swagger UI support
 	_ "github.com/SmartDoge/smartdoge/client/docs/statik"
 
-	"github.com/SmartDoge/smartdoge/app/ante"
 	srvflags "github.com/SmartDoge/smartdoge/server/flags"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
+	"github.com/tharsis/ethermint/app/ante"
 	"github.com/tharsis/ethermint/x/evm"
 	evmrest "github.com/tharsis/ethermint/x/evm/client/rest"
 	evmkeeper "github.com/tharsis/ethermint/x/evm/keeper"
