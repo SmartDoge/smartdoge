@@ -11,7 +11,6 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	feemarkettypes "github.com/SmartDoge/smartdoge/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -22,6 +21,7 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	tmjson "github.com/tendermint/tendermint/libs/json"
+	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 
 	"github.com/SmartDoge/smartdoge/app"
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"

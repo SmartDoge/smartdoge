@@ -11,10 +11,10 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 
-	feemarkettypes "github.com/SmartDoge/smartdoge/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/simapp"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
+	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/ethereum/go-ethereum/common"

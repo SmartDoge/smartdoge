@@ -37,7 +37,7 @@ import (
 	"github.com/SmartDoge/smartdoge/tests"
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/SmartDoge/smartdoge/x/feemarket/types"
+	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

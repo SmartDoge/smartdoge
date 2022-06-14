@@ -11,7 +11,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/SmartDoge/smartdoge/x/feemarket/types"
+	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 )
 
 // QueryClient defines a gRPC Client used for:

@@ -20,7 +20,6 @@ require (
 	github.com/improbable-eng/grpc-web v0.15.0
 	github.com/miguelmota/go-ethereum-hdwallet v0.1.1
 	github.com/onsi/ginkgo/v2 v2.1.4
-	github.com/onsi/gomega v1.19.0
 	github.com/pkg/errors v0.9.1
 	github.com/rakyll/statik v0.1.7
 	github.com/regen-network/cosmos-proto v0.3.1
@@ -32,6 +31,7 @@ require (
 	github.com/stretchr/testify v1.7.2
 	github.com/tendermint/tendermint v0.34.20-0.20220517115723-e6f071164839
 	github.com/tendermint/tm-db v0.6.7
+	github.com/tharsis/ethermint v0.16.1
 	github.com/tyler-smith/go-bip39 v1.1.0
 	google.golang.org/genproto v0.0.0-20220602131408-e326c6e8e9c8
 	google.golang.org/grpc v1.46.2
@@ -76,7 +76,6 @@ require (
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.5.1 // indirect
 	github.com/go-ole/go-ole v1.2.1 // indirect
-	github.com/go-playground/validator/v10 v10.4.1 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/godbus/dbus v0.0.0-20190726142602-4481cbc300e2 // indirect
 	github.com/gogo/gateway v1.1.0 // indirect

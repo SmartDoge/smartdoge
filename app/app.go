@@ -103,9 +103,9 @@ import (
 	evmrest "github.com/SmartDoge/smartdoge/x/evm/client/rest"
 	evmkeeper "github.com/SmartDoge/smartdoge/x/evm/keeper"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	"github.com/SmartDoge/smartdoge/x/feemarket"
-	feemarketkeeper "github.com/SmartDoge/smartdoge/x/feemarket/keeper"
-	feemarkettypes "github.com/SmartDoge/smartdoge/x/feemarket/types"
+	"github.com/tharsis/ethermint/x/feemarket"
+	feemarketkeeper "github.com/tharsis/ethermint/x/feemarket/keeper"
+	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 
 	// Force-load the tracer engines to trigger registration due to Go-Ethereum v1.10.15 changes
 	_ "github.com/ethereum/go-ethereum/eth/tracers/js"

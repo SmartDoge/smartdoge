@@ -13,7 +13,7 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/SmartDoge/smartdoge/x/feemarket/types"
+	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
