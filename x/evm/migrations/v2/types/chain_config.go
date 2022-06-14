@@ -10,7 +10,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/params"
 
-	"github.com/tharsis/ethermint/x/evm/types"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // EthereumConfig returns an Ethereum ChainConfig for EVM state transitions.

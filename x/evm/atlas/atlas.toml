@@ -10,7 +10,7 @@ keywords = [
 name = "x/evm"
 
 [bug_tracker]
-url = "https://github.com/tharsis/ethermint/issues"
+url = "https://github.com/SmartDoge/smartdoge/issues"
 
 [[authors]]
 name = "fedekunze"
