@@ -14,181 +14,198 @@
 </head>
 
 <body>
-    <div class="container" style="background: blue">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-                <span class="fs-4">SmartDoge Network</span>
-            </a>
-
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Dogevelopers</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Add to Metamask</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Get free SmartDoge!</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">🥩 Stake</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Press</a></li>
-            </ul>
-        </header>
-
-        <main>
-            <div class="container col-xxl-10">
-                <div class="row">
-                    <div class="col title-text fs-1 lh-1 fw-bold">
-                        <h1 class="fs-3">Smart Contracts</h1>
-                        <p>Welcome to</p>
-                        <p>the <span class="accent-1">Web3</span></p>
-                        <p class="accent-2">Memecosystem!</p>
-                    </div>
-                    <div class="col">
-                        <img />
-                    </div>
-                </div>
-            </div>
-
-            <div class="container col-xxl-10">
-                <div class="row justify-content-center">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-6">
-                                <img src="" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">
-                                        SmartDoge isn’t just a token - it’s an ecosystem! SmartDoge is based on
-                                        Ethereum, and is EVM compatible - so easy to port existing projects or build
-                                        something totally new. If you’re a software developer, the community can’t wait
-                                        to see your weird and wonderful creations!
-                                    </p>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="card col-4">
-                        <div class="row">
-                            <img class="row" />
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                Such Eco Frens, Smol Gas, Wow
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                SmartDoge uses Pwoof of Steak (PoS), so transactions are eco-friendly and cheap to
-                                validate.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-4">
-                        <div class="row">
-                            <img class="row" />
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                Docentralised
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                Unlike BSC or HECO (for example), SmartDoge isn’t created or governed by a centralised
-                                exchange. It’s a community parody project.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card col-4">
-                        <div class="row">
-                            <img class="row" />
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                Everybody Welcome
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                Whether you’re a doge or a shib, any token can be bridged to the SmartDoge network.
-                                Similarly, anybody can run a validator node or publish a Dapp.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <div class="container-fluid title-container">
+        <nav class="navbar navbar-expand-sm navbar-dark pt-4" aria-label="SmartDoge navbar">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="container col-xxl-8">
-                        <div class="row">
-                            <div class="col-6">
-                                <h2>The Great DOGE Burn</h2>
-                                <p>
-                                    SmartDoge is built to unite the meme coins. You can burn DOGE or SHIB for a share of
-                                    newly minted SmartDoge. As SmartDoge gets more valuable, so do the other meme coins.
-                                </p>
-                            </div>
-                            <div class="col-6">
-                                <img />
-                            </div>
+                <a href="/"
+                    class="navbar-brand d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                    <span class="fs-4 logo-text">
+                        SmartDoge<br />
+                        <span class="accent-1">Network</span>
+                    </span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarElements"
+                    aria-controls="navbarElements" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarElements">
+                    <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+                        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Dogevelopers</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Add to Metamask</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                        <li class="nav-item"><button type="button" class="btn btn-primary">Get free SmartDoge!</button>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">🥩 Stake</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container col-xxl-10 title-text-container">
+            <div class="row">
+                <div class="col title-text fs-1 lh-1 fw-bold">
+                    <h1 class="fs-3">Smart Contracts</h1>
+                    <span class="lh-sm">
+                        Welcome to<br />
+                        the <span class="accent-1">Web3</span><br />
+                        <span class="accent-2">Memecosystem!</span>
+                    </span>
+                </div>
+                <div class="col">
+                    <img />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-xxl-10">
+        <div class="row justify-content-center main-card-row">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
+                                SmartDoge isn’t just a token - it’s an ecosystem! SmartDoge is based on
+                                Ethereum, and is EVM compatible - so easy to port existing projects or build
+                                something totally new. If you’re a software developer, the community can’t wait
+                                to see your weird and wonderful creations!
+                            </p>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="row justify-content-center">
+            <div class="card col-4">
+                <div class="row">
+                    <img class="row" />
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Such Eco Frens, Smol Gas, Wow
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        SmartDoge uses Pwoof of Steak (PoS), so transactions are eco-friendly and cheap to
+                        validate.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-4">
+                <div class="row">
+                    <img class="row" />
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Docentralised
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Unlike BSC or HECO (for example), SmartDoge isn’t created or governed by a centralised
+                        exchange. It’s a community parody project.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-4">
+                <div class="row">
+                    <img class="row" />
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Everybody Welcome
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Whether you’re a doge or a shib, any token can be bridged to the SmartDoge network.
+                        Similarly, anybody can run a validator node or publish a Dapp.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background: orange">
+        <div class="row">
             <div class="container col-xxl-8">
                 <div class="row">
-                    <div class="col text-center">Total Community Token Distribution</div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        420M
-                        SmartDoge and 1,000,000 usdt will be added to a V2 uniswap pool
+                    <div class="col-6">
+                        <h2>The Great DOGE Burn</h2>
+                        <p>
+                            SmartDoge is built to unite the meme coins. You can burn DOGE or SHIB for a share of
+                            newly minted SmartDoge. As SmartDoge gets more valuable, so do the other meme coins.
+                        </p>
                     </div>
-                    <div class="col">
-                        69M
-                        will go to validators to kickstart validation for the network
-                    </div>
-                    <div class="col">
-                        69M
-                        will be airdropped (starting with 10M through our Twitter Faucet)
-                    </div>
-                    <div class="col">
-                        420M
-                        makes up the Dogeveloper fund. Get building!
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        The majority will be mined through staking,
-                        with 69 SmartDoge mined per block (about 2M per day).
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center">
+                    <div class="col-6">
                         <img />
-                        <h3>Join Pre-Launch</h3>
-                        <p>We're going to the moooooooon!</p>
-                        <p>Join the community!</p>
-                        <button type="button" class="btn btn-primary">Link to Telegram</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <p>Built by a few frontrunners for a laugh...</p>
-                        <p>(Vitalik Wooferin, Andre Dogje, and Sam Barkman Fried. Logo design by Elon Husky)</p>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background: blue">
+        <div class="container col-xxl-8">
+            <div class="row">
+                <div class="col text-center">Total Community Token Distribution</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    420M
+                    SmartDoge and 1,000,000 usdt will be added to a V2 uniswap pool
+                </div>
+                <div class="col">
+                    69M
+                    will go to validators to kickstart validation for the network
+                </div>
+                <div class="col">
+                    69M
+                    will be airdropped (starting with 10M through our Twitter Faucet)
+                </div>
+                <div class="col">
+                    420M
+                    makes up the Dogeveloper fund. Get building!
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    The majority will be mined through staking,
+                    with 69 SmartDoge mined per block (about 2M per day).
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <img />
+                    <h3>Join Pre-Launch</h3>
+                    <p>We're going to the moooooooon!</p>
+                    <p>Join the community!</p>
+                    <button type="button" class="btn btn-primary">Link to Telegram</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p>Built by a few frontrunners for a laugh...</p>
+                    <p>(Vitalik Wooferin, Andre Dogje, and Sam Barkman Fried. Logo design by Elon Husky)</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

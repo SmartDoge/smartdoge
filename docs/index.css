@@ -13,16 +13,39 @@ html {
     color: var(--accent-2);
 }
 
+.logo-text {
+    color: white;
+    font-family: var(--title-font);
+    font-weight: bold;
+    line-height: 1;
+}
+
+.navbar-nav,
+.navbar-nav button {
+    font-size: 14px;
+}
+
+.navbar-nav li {
+    margin-left: 8px;
+}
+
+.title-container {
+    background-color: blue;
+}
+
+.title-text-container {
+    padding: 150px 0 250px;
+}
+
 .title-text {
     color: white;
-
-
+    font-family: var(--title-font);
 }
 
 .title-text>h1 {
     font-family: var(--content-font);
 }
 
-.title-text> :not(h1) {
-    font-family: var(--title-font);
+.main-card-row {
+    margin-top: -72px
 }
