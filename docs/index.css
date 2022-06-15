@@ -3,6 +3,11 @@ html {
     --accent-2: rgb(255, 0, 255);
     --title-font: "Comic Sans MS", "Comic Sans", cursive;
     --content-font: Arial, sans-serif;
+    background-color: blue;
+}
+
+body {
+    background-color: transparent;
 }
 
 .accent-1 {
@@ -13,16 +18,11 @@ html {
     color: var(--accent-2);
 }
 
-.logo-text {
-    color: white;
+.title,
+.title-text,
+.card-title {
     font-family: var(--title-font);
     font-weight: bold;
-    line-height: 1;
-}
-
-.navbar-nav,
-.navbar-nav button {
-    font-size: 14px;
 }
 
 .navbar-nav li {
@@ -30,16 +30,11 @@ html {
 }
 
 .title-container {
-    background-color: blue;
+    background-color: transparent;
 }
 
 .title-text-container {
     padding: 150px 0 250px;
-}
-
-.title-text {
-    color: white;
-    font-family: var(--title-font);
 }
 
 .title-text>h1 {
@@ -48,4 +43,33 @@ html {
 
 .main-card-row {
     margin-top: -72px
+}
+
+.distribution-container-inner>.row {
+    padding: 12px
+}
+
+.distribution-container-inner span {
+    font-family: var(--title-font);
+}
+
+.horizontal-line {
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='1' fill='white' /></svg>");
+    background-size: 1px 1px;
+    background-position-y: center;
+    background-repeat: repeat-x;
+}
+
+.join-row>div {
+    border: 2px solid var(--accent-2);
+}
+
+.border-accent-2 {
+    border: 2px solid var(--accent-2);
+}
+
+footer {
+    font-size: 12px;
+    padding-top: 128px;
+    padding-bottom: 256px;
 }
