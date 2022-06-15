@@ -1,0 +1,28 @@
+html {
+    --accent-1: rgb(0, 137, 234);
+    --accent-2: rgb(255, 0, 255);
+    --title-font: "Comic Sans MS", "Comic Sans", cursive;
+    --content-font: Arial, sans-serif;
+}
+
+.accent-1 {
+    color: var(--accent-1);
+}
+
+.accent-2 {
+    color: var(--accent-2);
+}
+
+.title-text {
+    color: white;
+
+
+}
+
+.title-text>h1 {
+    font-family: var(--content-font);
+}
+
+.title-text> :not(h1) {
+    font-family: var(--title-font);
+}
