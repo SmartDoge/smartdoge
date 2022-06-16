@@ -1,0 +1,129 @@
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+html {
+    --accent-1: rgb(0, 137, 234);
+    --accent-2: rgb(255, 0, 255);
+    --title-font: "Comic Sans MS", "Comic Sans", cursive;
+    --content-font: Arial, sans-serif;
+    background-color: blue;
+}
+
+body {
+    background-color: transparent;
+}
+
+.accent-1 {
+    color: var(--accent-1);
+}
+
+.accent-2 {
+    color: var(--accent-2);
+}
+
+.title,
+.title-text,
+.card-title {
+    font-family: var(--title-font);
+    font-weight: bold;
+}
+
+.navbar-nav li {
+    margin-left: 8px;
+}
+
+.title-container {
+    background-color: transparent;
+}
+
+.title-text-container {
+    padding: 150px 0 250px;
+}
+
+.title-text>h1 {
+    font-family: var(--content-font);
+}
+
+.rocket-ship {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+.main-card-row {
+    margin-top: -72px
+}
+
+.distribution-container-inner>.row {
+    padding: 12px
+}
+
+.distribution-container-inner span {
+    font-family: var(--title-font);
+}
+
+.horizontal-line {
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'><rect width='1' height='1' fill='white' /></svg>");
+    background-size: 1px 1px;
+    background-position-y: center;
+    background-repeat: repeat-x;
+}
+
+.join-row>div {
+    border: 2px solid var(--accent-2);
+}
+
+.border-accent-2 {
+    border: 2px solid var(--accent-2);
+}
+
+footer {
+    font-size: 12px;
+    padding-top: 128px;
+    padding-bottom: 256px;
+}
