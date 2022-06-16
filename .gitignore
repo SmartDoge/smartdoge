@@ -23,7 +23,6 @@ bin
 tools/bin/*
 docs/_build
 docs/tutorial
-docs/node_modules
 docs/modules
 dist
 tools-stamp
@@ -31,7 +30,6 @@ docs-tools-stamp
 proto-tools-stamp
 golangci-lint
 keyring_test_cosmos
-./**/node_modules
 ./**/dist
 secret.yml
 # vue/
@@ -69,5 +67,4 @@ dependency-graph.png
 *.abi
 
 # Node.js
-tests/**/node_modules/*
-tests-solidity/**/node_modules/*
+node_modules

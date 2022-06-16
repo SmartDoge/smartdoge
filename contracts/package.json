@@ -1,0 +1,17 @@
+{
+  "name": "smartdoge-contracts",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "hardhat": "^2.9.9",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solhint": "^3.3.7",
+    "solidity-coverage": "^0.7.21",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.8"
+  },
+  "dependencies": {}
+}
