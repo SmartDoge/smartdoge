@@ -47,7 +47,7 @@
 html {
     --accent-1: rgb(0, 137, 234);
     --accent-2: rgb(255, 0, 255);
-    --title-font: "Comic Sans MS", "Comic Sans", cursive;
+    --title-font: "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, Arial, sans-serif;
     --content-font: Arial, sans-serif;
     background-color: blue;
 }
