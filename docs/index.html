@@ -38,7 +38,7 @@
                         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">🧑‍💻
                                 Dogevelopers</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link">🦊 Add to Metamask</a></li>
+                        <li id="metamaskLink" class="nav-item"><a href="#" class="nav-link">🦊 Add to Metamask</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">❓ FAQs</a></li>
                         <li class="nav-item"><button type="button" class="btn btn-primary">🤑 Get free
                                 SmartDoge!</button>
@@ -233,7 +233,29 @@
                 </p>
             </div>
     </div>
-    </div>
+
+    <script>
+        const metamaskLink = document.getElementById("metamaskLink");
+        if (typeof ethereum === "undefined") {
+            metamaskLink.style.display = "none";
+        } else {
+            metamaskLink.addEventListener("click", () => {
+                ethereum.request({
+                    method: 'wallet_addEthereumChain',
+                    params: [
+                        {
+                            chainId: '0xA455',
+                            chainName: "SmartDoge Testnet",
+                            rpcUrls: ["https://20.120.119.133:8545"],
+                        },
+                    ],
+                }).then(
+                    () => console.log("add chain succeeded"),
+                    e => console.error("add chain failed", e)
+                );
+            })
+        }
+    </script>
 </body>
 
 </html>
