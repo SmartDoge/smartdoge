@@ -246,7 +246,13 @@
                         {
                             chainId: '0xA455',
                             chainName: "SmartDoge Testnet",
-                            rpcUrls: ["https://20.120.119.133:8545"],
+                            nativeCurrency: {
+                                name: "SmartDoge",
+                                symbol: "SDOGE",
+                                decimals: 18,
+                            },
+                            rpcUrls: ["https://testnet-1.smartdoge.com"],
+                            blockExplorerUrls: ["https://explorer.smartdoge.com"],
                         },
                     ],
                 }).then(
