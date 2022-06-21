@@ -4,7 +4,7 @@ MONIKER=localnet
 KEY=$MONIKER
 # Must follow the pattern [letters]_[eis]-[epoch]. Mainnet uses smartdoge_420-[epoch]. Testnet uses smartdoge_42069-[epoch].
 CHAINID=smartdoge_31337-1
-# Determines where created keys are stored. "os" uses the OS keychain, "test" stores in an unencrypted file in the home directory.
+# Determines where created keys are stored. "test" stores in an unencrypted file in the home directory. Do not use outside of localnet!
 KEYRING=test
 
 # Init the node with default config
@@ -33,13 +33,18 @@ cat $HOME/.smartdoged/config/genesis.json | jq '.app_state["mint"]["params"]["in
 cat $HOME/.smartdoged/config/genesis.json | jq '.app_state["mint"]["params"]["goal_bonded"]="0.690000000000000000"' > $HOME/.smartdoged/config/tmp_genesis.json && mv $HOME/.smartdoged/config/tmp_genesis.json $HOME/.smartdoged/config/genesis.json
 cat $HOME/.smartdoged/config/genesis.json | jq '.app_state["mint"]["params"]["blocks_per_year"]="10519200"' > $HOME/.smartdoged/config/tmp_genesis.json && mv $HOME/.smartdoged/config/tmp_genesis.json $HOME/.smartdoged/config/genesis.json
 
+# Set the governance quorum to 50%
+cat $HOME/.smartdoged/config/genesis.json | jq '.app_state["gov"]["tally_params"]["quorum"]="0.500000000000000000"' > $HOME/.smartdoged/config/tmp_genesis.json && mv $HOME/.smartdoged/config/tmp_genesis.json $HOME/.smartdoged/config/genesis.json
+
 # Configure node parameters
 if [[ "$OSTYPE" == "darwin"* ]]; then
     sed -i '' 's/minimum-gas-prices = "0aphoton"/minimum-gas-prices = "0wei"/g' $HOME/.smartdoged/config/app.toml
-    sed -i '' 's/timeout_commit = "5s"/timeout_commit = "3s"/g' $DATA_DIR$i/config/config.toml
+    sed -i '' 's/pruning = "default"/pruning = "nothing"/g' $HOME/.smartdoged/config/app.toml
+    sed -i '' 's/timeout_commit = "5s"/timeout_commit = "3s"/g' $HOME/.smartdoged/config/config.toml
 else
     sed -i 's/minimum-gas-prices = "0aphoton"/minimum-gas-prices = "0wei"/g' $HOME/.smartdoged/config/app.toml
-    sed -i 's/timeout_commit = "5s"/timeout_commit = "150s"/g' $DATA_DIR$i/config/config.toml
+    sed -i 's/pruning = "default"/pruning = "nothing"/g' $HOME/.smartdoged/config/app.toml
+    sed -i 's/timeout_commit = "5s"/timeout_commit = "3s"/g' $HOME/.smartdoged/config/config.toml
 fi
 
 # Enable JSON-RPC namespaces
@@ -48,9 +53,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
     sed -i 's/api = "eth,net,web3"/api = "eth,txpool,personal,net,debug,web3,miner"/g' $HOME/.smartdoged/config/app.toml
 fi
-
-# Set the governance quorum to 50%
-cat $HOME/.smartdoged/config/genesis.json | jq '.app_state["gov"]["tally_params"]["quorum"]="0.500000000000000000"' > $HOME/.smartdoged/config/tmp_genesis.json && mv $HOME/.smartdoged/config/tmp_genesis.json $HOME/.smartdoged/config/genesis.json
 
 # Add a genesis account with the amount of staked currency and the amount of wallet currency
 smartdoged add-genesis-account $(smartdoged keys show $KEY -a) 1000000000000000000000000wei # 1 million SDOGE
