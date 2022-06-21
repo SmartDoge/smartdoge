@@ -255,10 +255,7 @@
                             blockExplorerUrls: ["https://explorer.smartdoge.com"],
                         },
                     ],
-                }).then(
-                    () => console.log("add chain succeeded"),
-                    e => console.error("add chain failed", e)
-                );
+                }).catch(e => console.error("add chain failed", e));
             })
         }
     </script>
