@@ -11,10 +11,10 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/version"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	cryptotypes "github.com/SmartDoge/cosmos-sdk/crypto/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/version"
 )
 
 // Cmd creates a main CLI command

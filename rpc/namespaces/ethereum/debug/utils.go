@@ -7,7 +7,7 @@ import (
 	"runtime/pprof"
 	"strings"
 
-	"github.com/cosmos/cosmos-sdk/server"
+	"github.com/SmartDoge/cosmos-sdk/server"
 	"github.com/tendermint/tendermint/libs/log"
 )
 

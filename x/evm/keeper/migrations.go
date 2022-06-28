@@ -2,7 +2,7 @@ package keeper
 
 import (
 	v2 "github.com/SmartDoge/smartdoge/x/evm/migrations/v2"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 )
 
 // Migrator is a struct for handling in-place store migrations.

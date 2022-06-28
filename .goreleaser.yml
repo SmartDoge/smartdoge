@@ -17,7 +17,7 @@ builds:
     flags:
         - -tags=cgo
     ldflags:
-      - -s -w -X github.com/cosmos/cosmos-sdk/version.Name=smartdoge -X github.com/cosmos/cosmos-sdk/version.AppName=smartdoged -X github.com/cosmos/cosmos-sdk/version.Version={{.Version}} -X github.com/cosmos/cosmos-sdk/version.Commit={{.Commit}}
+      - -s -w -X github.com/SmartDoge/cosmos-sdk/version.Name=smartdoge -X github.com/SmartDoge/cosmos-sdk/version.AppName=smartdoged -X github.com/SmartDoge/cosmos-sdk/version.Version={{.Version}} -X github.com/SmartDoge/cosmos-sdk/version.Commit={{.Commit}}
   - id: "smartdoged-darwin-arm64"
     main: ./cmd/smartdoged
     binary: bin/smartdoged
@@ -32,7 +32,7 @@ builds:
     flags:
       - -tags=cgo
     ldflags:
-      - -s -w -X github.com/cosmos/cosmos-sdk/version.Name=smartdoge -X github.com/cosmos/cosmos-sdk/version.AppName=smartdoged -X github.com/cosmos/cosmos-sdk/version.Version={{.Version}} -X github.com/cosmos/cosmos-sdk/version.Commit={{.Commit}}
+      - -s -w -X github.com/SmartDoge/cosmos-sdk/version.Name=smartdoge -X github.com/SmartDoge/cosmos-sdk/version.AppName=smartdoged -X github.com/SmartDoge/cosmos-sdk/version.Version={{.Version}} -X github.com/SmartDoge/cosmos-sdk/version.Commit={{.Commit}}
   - id: "smartdoged-linux"
     main: ./cmd/smartdoged
     binary: bin/smartdoged
@@ -47,7 +47,7 @@ builds:
     flags:
       - -tags=cgo
     ldflags:
-      - -s -w -X github.com/cosmos/cosmos-sdk/version.Name=smartdoge -X github.com/cosmos/cosmos-sdk/version.AppName=smartdoged -X github.com/cosmos/cosmos-sdk/version.Version={{.Version}} -X github.com/cosmos/cosmos-sdk/version.Commit={{.Commit}}
+      - -s -w -X github.com/SmartDoge/cosmos-sdk/version.Name=smartdoge -X github.com/SmartDoge/cosmos-sdk/version.AppName=smartdoged -X github.com/SmartDoge/cosmos-sdk/version.Version={{.Version}} -X github.com/SmartDoge/cosmos-sdk/version.Commit={{.Commit}}
   - id: "smartdoged-linux-arm64"
     main: ./cmd/smartdoged
     binary: bin/smartdoged
@@ -62,7 +62,7 @@ builds:
     flags:
       - -tags=cgo
     ldflags:
-      - -s -w -X github.com/cosmos/cosmos-sdk/version.Name=smartdoge -X github.com/cosmos/cosmos-sdk/version.AppName=smartdoged -X github.com/cosmos/cosmos-sdk/version.Version={{.Version}} -X github.com/cosmos/cosmos-sdk/version.Commit={{.Commit}}
+      - -s -w -X github.com/SmartDoge/cosmos-sdk/version.Name=smartdoge -X github.com/SmartDoge/cosmos-sdk/version.AppName=smartdoged -X github.com/SmartDoge/cosmos-sdk/version.Version={{.Version}} -X github.com/SmartDoge/cosmos-sdk/version.Commit={{.Commit}}
   - id: "smartdoged-windows"
     main: ./cmd/smartdoged
     binary: bin/smartdoged
@@ -78,7 +78,7 @@ builds:
       - -tags=cgo
       - -buildmode=exe
     ldflags:
-      - -s -w -X github.com/cosmos/cosmos-sdk/version.Name=smartdoge -X github.com/cosmos/cosmos-sdk/version.AppName=smartdoged -X github.com/cosmos/cosmos-sdk/version.Version={{.Version}} -X github.com/cosmos/cosmos-sdk/version.Commit={{.Commit}}
+      - -s -w -X github.com/SmartDoge/cosmos-sdk/version.Name=smartdoge -X github.com/SmartDoge/cosmos-sdk/version.AppName=smartdoged -X github.com/SmartDoge/cosmos-sdk/version.Version={{.Version}} -X github.com/SmartDoge/cosmos-sdk/version.Commit={{.Commit}}
 
 archives:
 - name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'

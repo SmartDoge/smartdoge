@@ -11,12 +11,12 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 
-	"github.com/cosmos/cosmos-sdk/simapp"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
+	"github.com/SmartDoge/cosmos-sdk/simapp"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
+	banktypes "github.com/SmartDoge/cosmos-sdk/x/bank/types"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 
-	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	stakingtypes "github.com/SmartDoge/cosmos-sdk/x/staking/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
@@ -24,10 +24,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/cosmos-sdk/baseapp"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/baseapp"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	"github.com/SmartDoge/smartdoge/app"
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"

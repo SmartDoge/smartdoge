@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/SmartDoge/cosmos-sdk/types/module"
 
 	"github.com/SmartDoge/smartdoge/x/evm/types"
 )

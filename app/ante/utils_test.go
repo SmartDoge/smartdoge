@@ -8,10 +8,10 @@ import (
 
 	"github.com/SmartDoge/smartdoge/ethereum/eip712"
 	"github.com/SmartDoge/smartdoge/types"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/x/auth/legacy/legacytx"
-	types2 "github.com/cosmos/cosmos-sdk/x/bank/types"
-	types3 "github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	"github.com/SmartDoge/cosmos-sdk/x/auth/legacy/legacytx"
+	types2 "github.com/SmartDoge/cosmos-sdk/x/bank/types"
+	types3 "github.com/SmartDoge/cosmos-sdk/x/staking/types"
 	"github.com/ethereum/go-ethereum/crypto"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -19,17 +19,17 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/tx"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
-	"github.com/cosmos/cosmos-sdk/simapp"
-	"github.com/cosmos/cosmos-sdk/testutil/testdata"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/tx/signing"
-	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
-	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client/tx"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	cryptotypes "github.com/SmartDoge/cosmos-sdk/crypto/types"
+	"github.com/SmartDoge/cosmos-sdk/simapp"
+	"github.com/SmartDoge/cosmos-sdk/testutil/testdata"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/types/tx/signing"
+	authsigning "github.com/SmartDoge/cosmos-sdk/x/auth/signing"
+	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 
 	"github.com/SmartDoge/smartdoge/app"
 	ante "github.com/SmartDoge/smartdoge/app/ante"
@@ -37,7 +37,7 @@ import (
 	"github.com/SmartDoge/smartdoge/tests"
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

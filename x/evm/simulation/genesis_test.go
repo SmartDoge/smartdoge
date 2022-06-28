@@ -9,10 +9,10 @@ import (
 
 	"github.com/SmartDoge/smartdoge/x/evm/simulation"
 	"github.com/SmartDoge/smartdoge/x/evm/types"
-	"github.com/cosmos/cosmos-sdk/codec"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	"github.com/SmartDoge/cosmos-sdk/types/module"
+	simtypes "github.com/SmartDoge/cosmos-sdk/types/simulation"
 )
 
 // TestRandomizedGenState tests the normal scenario of applying RandomizedGenState.

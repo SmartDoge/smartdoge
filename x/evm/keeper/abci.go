@@ -3,7 +3,7 @@ package keeper
 import (
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )

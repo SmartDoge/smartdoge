@@ -3,9 +3,9 @@ package keeper
 import (
 	"math/big"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	authante "github.com/SmartDoge/cosmos-sdk/x/auth/ante"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 

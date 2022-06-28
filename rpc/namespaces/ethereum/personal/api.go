@@ -8,16 +8,16 @@ import (
 
 	"github.com/SmartDoge/smartdoge/rpc/backend"
 
-	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client"
 
 	"github.com/SmartDoge/smartdoge/crypto/hd"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 
 	"github.com/tendermint/tendermint/libs/log"
 
-	sdkcrypto "github.com/cosmos/cosmos-sdk/crypto"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdkcrypto "github.com/SmartDoge/cosmos-sdk/crypto"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"

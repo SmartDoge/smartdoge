@@ -8,9 +8,9 @@ import (
 	"github.com/rs/cors"
 
 	"github.com/SmartDoge/smartdoge/rpc"
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/server"
-	"github.com/cosmos/cosmos-sdk/server/types"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/server"
+	"github.com/SmartDoge/cosmos-sdk/server/types"
 	ethlog "github.com/ethereum/go-ethereum/log"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
 

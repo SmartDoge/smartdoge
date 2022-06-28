@@ -3,12 +3,13 @@ module github.com/SmartDoge/smartdoge
 go 1.17
 
 require (
+	github.com/SmartDoge/cosmos-sdk v0.45.5-0.20220628092137-70f64a0078c8
+	github.com/SmartDoge/ethermint v0.16.2-0.20220628131659-5bd5bb27a78c
+	github.com/SmartDoge/ibc-go/v3 v3.0.1-0.20220628130651-8f5e14a542e9
 	github.com/armon/go-metrics v0.4.0
 	github.com/btcsuite/btcd v0.22.1
 	github.com/btcsuite/btcutil v1.0.3-0.20201208143702-a53e38424cce
-	github.com/cosmos/cosmos-sdk v0.45.5-0.20220523154235-2921a1c3c918
 	github.com/cosmos/go-bip39 v1.0.0
-	github.com/cosmos/ibc-go/v3 v3.0.0
 	github.com/davecgh/go-spew v1.1.1
 	github.com/ethereum/go-ethereum v1.10.16
 	github.com/gogo/protobuf v1.3.3
@@ -31,7 +32,6 @@ require (
 	github.com/stretchr/testify v1.7.2
 	github.com/tendermint/tendermint v0.34.20-0.20220517115723-e6f071164839
 	github.com/tendermint/tm-db v0.6.7
-	github.com/tharsis/ethermint v0.16.1
 	github.com/tyler-smith/go-bip39 v1.1.0
 	google.golang.org/genproto v0.0.0-20220602131408-e326c6e8e9c8
 	google.golang.org/grpc v1.46.2

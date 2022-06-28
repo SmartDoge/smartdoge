@@ -12,7 +12,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	ethparams "github.com/ethereum/go-ethereum/params"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/SmartDoge/smartdoge/server/config"

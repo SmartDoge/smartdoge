@@ -7,8 +7,8 @@ import (
 
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/cosmos/cosmos-sdk/client/keys"
-	cryptokeyring "github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/SmartDoge/cosmos-sdk/client/keys"
+	cryptokeyring "github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 )
 
 // available output formats.

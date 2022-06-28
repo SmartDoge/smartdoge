@@ -7,10 +7,10 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 
 	cryptocodec "github.com/SmartDoge/smartdoge/crypto/codec"
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"

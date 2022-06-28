@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/cosmos-sdk/testutil"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
+	"github.com/SmartDoge/cosmos-sdk/testutil"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	paramtypes "github.com/SmartDoge/cosmos-sdk/x/params/types"
 
 	"github.com/SmartDoge/smartdoge/encoding"
 

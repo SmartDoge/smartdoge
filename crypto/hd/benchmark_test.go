@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 )
 
 func BenchmarkEthSecp256k1Algo_Derive(b *testing.B) {

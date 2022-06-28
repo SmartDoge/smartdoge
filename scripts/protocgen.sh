@@ -24,7 +24,7 @@ for dir in $proto_dirs; do
   -I "proto" \
   -I "third_party/proto" \
   --gocosmos_out=plugins=interfacetype+grpc,\
-Mgoogle/protobuf/any.proto=github.com/cosmos/cosmos-sdk/codec/types:. \
+Mgoogle/protobuf/any.proto=github.com/SmartDoge/cosmos-sdk/codec/types:. \
   --grpc-gateway_out=logtostderr=true:. \
   $(find "${dir}" -maxdepth 1 -name '*.proto')
 

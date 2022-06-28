@@ -6,8 +6,8 @@ import (
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/cosmos-sdk/crypto/hd"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/crypto/hd"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 )
 
 func TestSetBech32Prefixes(t *testing.T) {

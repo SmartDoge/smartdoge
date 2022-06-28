@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
-	"github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
+	svrcmd "github.com/SmartDoge/cosmos-sdk/server/cmd"
+	"github.com/SmartDoge/cosmos-sdk/x/genutil/client/cli"
 
 	"github.com/SmartDoge/smartdoge/app"
 	smartdoged "github.com/SmartDoge/smartdoge/cmd/smartdoged"

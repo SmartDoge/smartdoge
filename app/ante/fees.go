@@ -3,8 +3,8 @@ package ante
 import (
 	"math/big"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"

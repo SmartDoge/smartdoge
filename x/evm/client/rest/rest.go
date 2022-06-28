@@ -11,13 +11,13 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	clientrest "github.com/cosmos/cosmos-sdk/client/rest"
-	"github.com/cosmos/cosmos-sdk/types/rest"
-	authrest "github.com/cosmos/cosmos-sdk/x/auth/client/rest"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	clientrest "github.com/SmartDoge/cosmos-sdk/client/rest"
+	"github.com/SmartDoge/cosmos-sdk/types/rest"
+	authrest "github.com/SmartDoge/cosmos-sdk/x/auth/client/rest"
 
 	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
-	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 
 	"github.com/ethereum/go-ethereum/common"
 )

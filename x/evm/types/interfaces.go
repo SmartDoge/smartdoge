@@ -3,13 +3,13 @@ package types
 import (
 	"math/big"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
+	stakingtypes "github.com/SmartDoge/cosmos-sdk/x/staking/types"
 
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 )
 
 // AccountKeeper defines the expected account keeper interface

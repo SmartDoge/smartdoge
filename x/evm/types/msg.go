@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/x/auth/ante"
-	"github.com/cosmos/cosmos-sdk/x/auth/signing"
-	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	"github.com/SmartDoge/cosmos-sdk/x/auth/ante"
+	"github.com/SmartDoge/cosmos-sdk/x/auth/signing"
+	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
 
 	"github.com/SmartDoge/smartdoge/types"
 

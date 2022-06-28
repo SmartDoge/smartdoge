@@ -1,8 +1,8 @@
 package evm
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
 
 	"github.com/SmartDoge/smartdoge/x/evm/types"
 )

@@ -3,7 +3,7 @@ package ante_test
 import (
 	"math/big"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	"github.com/SmartDoge/smartdoge/app/ante"
 	"github.com/SmartDoge/smartdoge/server/config"

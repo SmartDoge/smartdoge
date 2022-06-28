@@ -1,11 +1,11 @@
 package codec
 
 import (
-	"github.com/cosmos/cosmos-sdk/client/keys"
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/codec/legacy"
-	cryptocodec "github.com/cosmos/cosmos-sdk/crypto/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/SmartDoge/cosmos-sdk/client/keys"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	"github.com/SmartDoge/cosmos-sdk/codec/legacy"
+	cryptocodec "github.com/SmartDoge/cosmos-sdk/crypto/codec"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 )

@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"strconv"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	authante "github.com/SmartDoge/cosmos-sdk/x/auth/ante"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 	evmkeeper "github.com/SmartDoge/smartdoge/x/evm/keeper"
@@ -221,7 +221,7 @@ func (egcd EthGasConsumeDecorator) AnteHandle(ctx sdk.Context, tx sdk.Tx, simula
 	// TODO: change to typed events
 	ctx.EventManager().EmitEvents(events)
 
-	// TODO: deprecate after https://github.com/cosmos/cosmos-sdk/issues/9514  is fixed on SDK
+	// TODO: deprecate after https://github.com/SmartDoge/cosmos-sdk/issues/9514  is fixed on SDK
 	blockGasLimit := smartdoge.BlockGasLimit(ctx)
 
 	// NOTE: safety check

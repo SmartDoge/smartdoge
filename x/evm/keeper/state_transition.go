@@ -6,10 +6,10 @@ import (
 
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
+	stakingtypes "github.com/SmartDoge/cosmos-sdk/x/staking/types"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"
@@ -189,7 +189,7 @@ func (k Keeper) GetHashFn(ctx sdk.Context) vm.GetHashFunc {
 // consideration the amount of gas returned. Finally, the context is updated with the EVM gas consumed value prior to
 // returning.
 //
-// For relevant discussion see: https://github.com/cosmos/cosmos-sdk/discussions/9072
+// For relevant discussion see: https://github.com/SmartDoge/cosmos-sdk/discussions/9072
 func (k *Keeper) ApplyTransaction(ctx sdk.Context, tx *ethtypes.Transaction) (*types.MsgEthereumTxResponse, error) {
 	var (
 		bloom        *big.Int

@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/SmartDoge/smartdoge/rpc/types"
-	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client"
 
 	"github.com/tendermint/tendermint/libs/log"
 

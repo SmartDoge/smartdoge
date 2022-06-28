@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	authante "github.com/SmartDoge/cosmos-sdk/x/auth/ante"
 	"github.com/ethereum/go-ethereum/common"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"

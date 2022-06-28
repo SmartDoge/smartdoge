@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 
 	"github.com/spf13/cobra"
 
@@ -28,18 +28,18 @@ import (
 	"github.com/tendermint/tendermint/rpc/client/local"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/cosmos/cosmos-sdk/server/rosetta"
-	crgserver "github.com/cosmos/cosmos-sdk/server/rosetta/lib/server"
+	"github.com/SmartDoge/cosmos-sdk/server/rosetta"
+	crgserver "github.com/SmartDoge/cosmos-sdk/server/rosetta/lib/server"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/server"
-	"github.com/cosmos/cosmos-sdk/server/api"
-	serverconfig "github.com/cosmos/cosmos-sdk/server/config"
-	servergrpc "github.com/cosmos/cosmos-sdk/server/grpc"
-	"github.com/cosmos/cosmos-sdk/server/types"
-	storetypes "github.com/cosmos/cosmos-sdk/store/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
+	"github.com/SmartDoge/cosmos-sdk/server"
+	"github.com/SmartDoge/cosmos-sdk/server/api"
+	serverconfig "github.com/SmartDoge/cosmos-sdk/server/config"
+	servergrpc "github.com/SmartDoge/cosmos-sdk/server/grpc"
+	"github.com/SmartDoge/cosmos-sdk/server/types"
+	storetypes "github.com/SmartDoge/cosmos-sdk/store/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	ethdebug "github.com/SmartDoge/smartdoge/rpc/namespaces/ethereum/debug"
 	"github.com/SmartDoge/smartdoge/server/config"

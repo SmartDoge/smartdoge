@@ -9,8 +9,8 @@ import (
 	"sort"
 	"strings"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
@@ -386,7 +386,7 @@ func TxSuccessOrExceedsBlockGasLimit(res *abci.ResponseDeliverTx) bool {
 }
 
 // ShouldIgnoreGasUsed returns true if the gasUsed in result should be ignored
-// workaround for issue: https://github.com/cosmos/cosmos-sdk/issues/10832
+// workaround for issue: https://github.com/SmartDoge/cosmos-sdk/issues/10832
 func ShouldIgnoreGasUsed(res *abci.ResponseDeliverTx) bool {
 	return res.GetCode() == 11 && strings.Contains(res.GetLog(), "no block gas left to run tx: out of gas")
 }

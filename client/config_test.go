@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
 )
 

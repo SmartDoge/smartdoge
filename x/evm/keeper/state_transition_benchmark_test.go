@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"

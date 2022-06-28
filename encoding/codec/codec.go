@@ -1,10 +1,10 @@
 package codec
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	"github.com/cosmos/cosmos-sdk/std"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	"github.com/SmartDoge/cosmos-sdk/std"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	cryptocodec "github.com/SmartDoge/smartdoge/crypto/codec"
 	smartdoge "github.com/SmartDoge/smartdoge/types"

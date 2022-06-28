@@ -1,8 +1,8 @@
 package types
 
 import (
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 )
 
 type ExtensionOptionsWeb3TxI interface{}

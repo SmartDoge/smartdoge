@@ -8,12 +8,12 @@ The `x/evm` module is responsible for executing Ethereum Virtual Machine (EVM) s
 
    ```go
    import (
-      "github.com/cosmos/cosmos-sdk/x/auth"
-      "github.com/cosmos/cosmos-sdk/x/bank"
-       
-      "github.com/tharsis/ethermint/app/ante"
-      ethermint "github.com/tharsis/ethermint/types"
-      "github.com/tharsis/ethermint/x/evm"
+      "github.com/SmartDoge/cosmos-sdk/x/auth"
+      "github.com/SmartDoge/cosmos-sdk/x/bank"
+
+      "github.com/SmartDoge/ethermint/app/ante"
+      ethermint "github.com/SmartDoge/ethermint/types"
+      "github.com/SmartDoge/ethermint/x/evm"
    )
    ```
 

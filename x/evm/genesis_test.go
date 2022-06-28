@@ -9,7 +9,7 @@ import (
 	"github.com/SmartDoge/smartdoge/x/evm"
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 	"github.com/SmartDoge/smartdoge/x/evm/types"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 )
 
 func (suite *EvmTestSuite) TestInitGenesis() {

@@ -1,10 +1,10 @@
 package types
 
-import sdk "github.com/cosmos/cosmos-sdk/types"
+import sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 // BlockGasLimit returns the max gas (limit) defined in the block gas meter. If the meter is not
 // set, it returns the max gas from the application consensus params.
-// NOTE: see https://github.com/cosmos/cosmos-sdk/issues/9514 for full reference
+// NOTE: see https://github.com/SmartDoge/cosmos-sdk/issues/9514 for full reference
 func BlockGasLimit(ctx sdk.Context) uint64 {
 	blockGasMeter := ctx.BlockGasMeter()
 

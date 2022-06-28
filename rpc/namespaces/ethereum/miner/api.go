@@ -3,17 +3,17 @@ package miner
 import (
 	"math/big"
 
-	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/client/tx"
-	"github.com/cosmos/cosmos-sdk/server"
-	sdkconfig "github.com/cosmos/cosmos-sdk/server/config"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
+	"github.com/SmartDoge/cosmos-sdk/client/tx"
+	"github.com/SmartDoge/cosmos-sdk/server"
+	sdkconfig "github.com/SmartDoge/cosmos-sdk/server/config"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
 
-	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
-	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
+	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
+	distributiontypes "github.com/SmartDoge/cosmos-sdk/x/distribution/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"

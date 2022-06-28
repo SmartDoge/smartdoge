@@ -36,7 +36,7 @@ ifeq ($(LEDGER_ENABLED),true)
   else
     UNAME_S = $(shell uname -s)
     ifeq ($(UNAME_S),OpenBSD)
-      $(warning OpenBSD detected, disabling ledger support (https://github.com/cosmos/cosmos-sdk/issues/1988))
+      $(warning OpenBSD detected, disabling ledger support (https://github.com/SmartDoge/cosmos-sdk/issues/1988))
     else
       GCC = $(shell command -v gcc 2> /dev/null)
       ifeq ($(GCC),)
@@ -61,30 +61,30 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=smartdoge \
-		  -X github.com/cosmos/cosmos-sdk/version.AppName=$(SMARTDOGE_BINARY) \
-		  -X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
-		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
-			-X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)" \
+ldflags = -X github.com/SmartDoge/cosmos-sdk/version.Name=smartdoge \
+		  -X github.com/SmartDoge/cosmos-sdk/version.AppName=$(SMARTDOGE_BINARY) \
+		  -X github.com/SmartDoge/cosmos-sdk/version.Version=$(VERSION) \
+		  -X github.com/SmartDoge/cosmos-sdk/version.Commit=$(COMMIT) \
+			-X "github.com/SmartDoge/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)" \
 			-X github.com/tendermint/tendermint/version.TMCoreSemVer=$(TMVERSION)
 
 # DB backend selection
 ifeq (cleveldb,$(findstring cleveldb,$(COSMOS_BUILD_OPTIONS)))
-  ldflags += -X github.com/cosmos/cosmos-sdk/types.DBBackend=cleveldb
+  ldflags += -X github.com/SmartDoge/cosmos-sdk/types.DBBackend=cleveldb
 endif
 ifeq (badgerdb,$(findstring badgerdb,$(COSMOS_BUILD_OPTIONS)))
-  ldflags += -X github.com/cosmos/cosmos-sdk/types.DBBackend=badgerdb
+  ldflags += -X github.com/SmartDoge/cosmos-sdk/types.DBBackend=badgerdb
 endif
 # handle rocksdb
 ifeq (rocksdb,$(findstring rocksdb,$(COSMOS_BUILD_OPTIONS)))
   CGO_ENABLED=1
   BUILD_TAGS += rocksdb
-  ldflags += -X github.com/cosmos/cosmos-sdk/types.DBBackend=rocksdb
+  ldflags += -X github.com/SmartDoge/cosmos-sdk/types.DBBackend=rocksdb
 endif
 # handle boltdb
 ifeq (boltdb,$(findstring boltdb,$(COSMOS_BUILD_OPTIONS)))
   BUILD_TAGS += boltdb
-  ldflags += -X github.com/cosmos/cosmos-sdk/types.DBBackend=boltdb
+  ldflags += -X github.com/SmartDoge/cosmos-sdk/types.DBBackend=boltdb
 endif
 
 ifeq (,$(findstring nostrip,$(COSMOS_BUILD_OPTIONS)))

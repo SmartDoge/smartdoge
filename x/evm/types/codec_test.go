@@ -3,7 +3,7 @@ package types
 import (
 	"testing"
 
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
 	"github.com/stretchr/testify/require"
 )
 

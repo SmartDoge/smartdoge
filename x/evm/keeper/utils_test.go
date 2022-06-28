@@ -5,7 +5,7 @@ import (
 
 	evmkeeper "github.com/SmartDoge/smartdoge/x/evm/keeper"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	ethparams "github.com/ethereum/go-ethereum/params"

@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/cosmos/cosmos-sdk/server"
-	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/server"
+	svrcmd "github.com/SmartDoge/cosmos-sdk/server/cmd"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	"github.com/SmartDoge/smartdoge/app"
 	cmdcfg "github.com/SmartDoge/smartdoge/cmd/config"

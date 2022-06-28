@@ -1,15 +1,15 @@
 package ante
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/types/tx/signing"
-	"github.com/cosmos/cosmos-sdk/x/auth/ante"
-	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	"github.com/SmartDoge/cosmos-sdk/types/tx/signing"
+	"github.com/SmartDoge/cosmos-sdk/x/auth/ante"
+	authsigning "github.com/SmartDoge/cosmos-sdk/x/auth/signing"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 
-	ibcante "github.com/cosmos/ibc-go/v3/modules/core/ante"
-	ibckeeper "github.com/cosmos/ibc-go/v3/modules/core/keeper"
+	ibcante "github.com/SmartDoge/ibc-go/v3/modules/core/ante"
+	ibckeeper "github.com/SmartDoge/ibc-go/v3/modules/core/keeper"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 )

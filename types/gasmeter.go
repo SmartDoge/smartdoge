@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	math "math"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 )
 
 // ErrorNegativeGasConsumed defines an error thrown when the amount of gas refunded results in a
@@ -69,7 +69,7 @@ func (g *infiniteGasMeterWithLimit) ConsumeGas(amount sdk.Gas, descriptor string
 //
 // Use case: This functionality enables refunding gas to the trasaction or block gas pools so that
 // EVM-compatible chains can fully support the go-ethereum StateDb interface.
-// See https://github.com/cosmos/cosmos-sdk/pull/9403 for reference.
+// See https://github.com/SmartDoge/cosmos-sdk/pull/9403 for reference.
 func (g *infiniteGasMeterWithLimit) RefundGas(amount sdk.Gas, descriptor string) {
 	if g.consumed < amount {
 		panic(ErrorNegativeGasConsumed{Descriptor: descriptor})

@@ -21,15 +21,15 @@ import (
 
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	grpctypes "github.com/cosmos/cosmos-sdk/types/grpc"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	grpctypes "github.com/SmartDoge/cosmos-sdk/types/grpc"
 
 	"github.com/SmartDoge/smartdoge/rpc/types"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 )
 
 var bAttributeKeyEthereumBloom = []byte(evmtypes.AttributeKeyEthereumBloom)
@@ -292,7 +292,7 @@ func (b *Backend) EthBlockFromTendermint(
 	gasUsed := uint64(0)
 
 	for _, txsResult := range resBlockResult.TxsResults {
-		// workaround for cosmos-sdk bug. https://github.com/cosmos/cosmos-sdk/issues/10832
+		// workaround for cosmos-sdk bug. https://github.com/SmartDoge/cosmos-sdk/issues/10832
 		if ShouldIgnoreGasUsed(txsResult) {
 			// block gas limit has exceeded, other txs must have failed with same reason.
 			break

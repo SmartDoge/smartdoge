@@ -8,9 +8,9 @@ import (
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
 	"github.com/spf13/cobra"
 
-	sdkserver "github.com/cosmos/cosmos-sdk/server"
-	"github.com/cosmos/cosmos-sdk/server/types"
-	"github.com/cosmos/cosmos-sdk/version"
+	sdkserver "github.com/SmartDoge/cosmos-sdk/server"
+	"github.com/SmartDoge/cosmos-sdk/server/types"
+	"github.com/SmartDoge/cosmos-sdk/version"
 
 	tmcmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
 	tmlog "github.com/tendermint/tendermint/libs/log"

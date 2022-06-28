@@ -10,7 +10,7 @@ import (
 
 	"github.com/tendermint/tendermint/libs/cli"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 )

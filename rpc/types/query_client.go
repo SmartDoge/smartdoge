@@ -3,15 +3,15 @@ package types
 import (
 	"fmt"
 
-	"github.com/cosmos/cosmos-sdk/types/tx"
+	"github.com/SmartDoge/cosmos-sdk/types/tx"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/proto/tendermint/crypto"
 
-	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 )
 
 // QueryClient defines a gRPC Client used for:
@@ -37,7 +37,7 @@ func NewQueryClient(clientCtx client.Context) *QueryClient {
 // tendermint height to perform the query should be set in the client context. The query will be
 // performed at one below this height (at the IAVL version) in order to obtain the correct merkle
 // proof. Proof queries at height less than or equal to 2 are not supported.
-// Issue: https://github.com/cosmos/cosmos-sdk/issues/6567
+// Issue: https://github.com/SmartDoge/cosmos-sdk/issues/6567
 func (QueryClient) GetProof(clientCtx client.Context, storeKey string, key []byte) ([]byte, *crypto.ProofOps, error) {
 	height := clientCtx.Height
 	// ABCI queries at height less than or equal to 2 are not supported.

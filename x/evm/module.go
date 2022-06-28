@@ -12,12 +12,12 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/codec"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/types/module"
+	simtypes "github.com/SmartDoge/cosmos-sdk/types/simulation"
 
 	"github.com/SmartDoge/smartdoge/x/evm/client/cli"
 	"github.com/SmartDoge/smartdoge/x/evm/keeper"

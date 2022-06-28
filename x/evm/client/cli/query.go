@@ -4,8 +4,8 @@ import (
 	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
 	"github.com/spf13/cobra"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/flags"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
 
 	"github.com/SmartDoge/smartdoge/x/evm/types"
 )

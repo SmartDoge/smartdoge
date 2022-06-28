@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"math/big"
 
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
-	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	cryptotypes "github.com/SmartDoge/cosmos-sdk/crypto/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	authsigning "github.com/SmartDoge/cosmos-sdk/x/auth/signing"
+	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 
 	"github.com/SmartDoge/smartdoge/tests"
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"

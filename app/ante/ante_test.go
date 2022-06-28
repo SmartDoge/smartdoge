@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/cosmos/cosmos-sdk/types/tx/signing"
+	"github.com/SmartDoge/cosmos-sdk/types/tx/signing"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	"github.com/SmartDoge/smartdoge/tests"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"

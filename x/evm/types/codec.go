@@ -1,11 +1,11 @@
 package types
 
 import (
-	"github.com/cosmos/cosmos-sdk/codec"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/types/msgservice"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	"github.com/SmartDoge/cosmos-sdk/types/msgservice"
 	proto "github.com/gogo/protobuf/proto"
 )
 

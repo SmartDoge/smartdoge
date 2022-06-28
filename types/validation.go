@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"math"
 
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
 	"github.com/ethereum/go-ethereum/common"
 )
 

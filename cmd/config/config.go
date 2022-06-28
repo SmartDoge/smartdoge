@@ -1,7 +1,7 @@
 package config
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 )

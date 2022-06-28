@@ -8,12 +8,12 @@ import (
 	"testing"
 
 	"github.com/SmartDoge/smartdoge/rpc/types"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
-	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
+	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
+	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 
 	// . "github.com/onsi/ginkgo/v2"
 	// . "github.com/onsi/gomega"

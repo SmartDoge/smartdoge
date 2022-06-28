@@ -10,8 +10,8 @@ import (
 
 	hdwallet "github.com/miguelmota/go-ethereum-hdwallet"
 
-	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/SmartDoge/cosmos-sdk/codec"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 
 	cryptocodec "github.com/SmartDoge/smartdoge/crypto/codec"
 	smartdoge "github.com/SmartDoge/smartdoge/types"

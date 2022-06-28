@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	smartdoge "github.com/SmartDoge/smartdoge/types"
-	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client"
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
 )
 

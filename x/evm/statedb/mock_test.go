@@ -6,7 +6,7 @@ import (
 	"math/big"
 
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 )

@@ -18,10 +18,10 @@ import (
 
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 
-	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client"
 	stderrors "github.com/pkg/errors"
 
-	"github.com/cosmos/cosmos-sdk/server"
+	"github.com/SmartDoge/cosmos-sdk/server"
 
 	"github.com/SmartDoge/smartdoge/rpc/backend"
 	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"

@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/SmartDoge/smartdoge/encoding"
-	"github.com/cosmos/cosmos-sdk/simapp"
+	"github.com/SmartDoge/cosmos-sdk/simapp"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"

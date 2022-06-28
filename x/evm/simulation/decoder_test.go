@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/SmartDoge/smartdoge/x/evm/types"
-	"github.com/cosmos/cosmos-sdk/types/kv"
+	"github.com/SmartDoge/cosmos-sdk/types/kv"
 	"github.com/ethereum/go-ethereum/common"
 )
 

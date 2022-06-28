@@ -5,17 +5,17 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/client/input"
-	"github.com/cosmos/cosmos-sdk/crypto"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
+	"github.com/SmartDoge/cosmos-sdk/client/input"
+	"github.com/SmartDoge/cosmos-sdk/crypto"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/spf13/cobra"
 
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/SmartDoge/smartdoge/crypto/hd"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 )
 
 // UnsafeExportEthKeyCommand exports a key with the given name as a private key in hex format.

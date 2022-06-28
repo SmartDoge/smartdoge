@@ -3,7 +3,7 @@ package types
 import (
 	"math/big"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 )
 
 const (

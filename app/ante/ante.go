@@ -6,11 +6,11 @@ import (
 
 	tmlog "github.com/tendermint/tendermint/libs/log"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/cosmos/cosmos-sdk/types/tx/signing"
-	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
-	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	"github.com/SmartDoge/cosmos-sdk/types/tx/signing"
+	authante "github.com/SmartDoge/cosmos-sdk/x/auth/ante"
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 )

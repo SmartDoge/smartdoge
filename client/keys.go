@@ -3,16 +3,16 @@ package client
 import (
 	"bufio"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/cosmos/cosmos-sdk/client/keys"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/SmartDoge/cosmos-sdk/client"
+	"github.com/SmartDoge/cosmos-sdk/client/flags"
+	"github.com/SmartDoge/cosmos-sdk/client/keys"
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	"github.com/spf13/cobra"
 	"github.com/tendermint/tendermint/libs/cli"
 
 	clientkeys "github.com/SmartDoge/smartdoge/client/keys"
 	"github.com/SmartDoge/smartdoge/crypto/hd"
-	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 )
 
 // KeyCommands registers a sub-tree of commands to interact with
