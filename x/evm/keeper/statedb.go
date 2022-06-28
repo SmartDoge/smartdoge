@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"math/big"
 
-	smartdoge "github.com/SmartDoge/smartdoge/types"
-	"github.com/SmartDoge/smartdoge/x/evm/statedb"
-	"github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/SmartDoge/cosmos-sdk/store/prefix"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
+	"github.com/SmartDoge/smartdoge/x/evm/statedb"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 )
 

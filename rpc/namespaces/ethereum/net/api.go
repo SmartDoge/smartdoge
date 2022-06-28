@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	smartdoge "github.com/SmartDoge/smartdoge/types"
 	"github.com/SmartDoge/cosmos-sdk/client"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
 )
 

@@ -3,15 +3,15 @@ package ante
 import (
 	"math/big"
 
-	"github.com/SmartDoge/smartdoge/x/evm/statedb"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	tx "github.com/SmartDoge/cosmos-sdk/types/tx"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
+	"github.com/SmartDoge/smartdoge/x/evm/statedb"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/params"
-	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 )
 
 // EVMKeeper defines the expected keeper interface used on the Eth AnteHandler

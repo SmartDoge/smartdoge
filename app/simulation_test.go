@@ -10,7 +10,6 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	evmenc "github.com/SmartDoge/smartdoge/encoding"
 	"github.com/SmartDoge/cosmos-sdk/baseapp"
 	"github.com/SmartDoge/cosmos-sdk/simapp"
 	"github.com/SmartDoge/cosmos-sdk/simapp/params"
@@ -29,6 +28,7 @@ import (
 	stakingtypes "github.com/SmartDoge/cosmos-sdk/x/staking/types"
 	ibctransfertypes "github.com/SmartDoge/ibc-go/v3/modules/apps/transfer/types"
 	ibchost "github.com/SmartDoge/ibc-go/v3/modules/core/24-host"
+	evmenc "github.com/SmartDoge/smartdoge/encoding"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

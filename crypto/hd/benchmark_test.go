@@ -3,8 +3,8 @@ package hd
 import (
 	"testing"
 
-	smartdoge "github.com/SmartDoge/smartdoge/types"
 	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
+	smartdoge "github.com/SmartDoge/smartdoge/types"
 )
 
 func BenchmarkEthSecp256k1Algo_Derive(b *testing.B) {

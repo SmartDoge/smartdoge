@@ -3,11 +3,11 @@ package ante_test
 import (
 	"math/big"
 
+	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	banktypes "github.com/SmartDoge/cosmos-sdk/x/bank/types"
 	"github.com/SmartDoge/smartdoge/app/ante"
 	"github.com/SmartDoge/smartdoge/tests"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	sdk "github.com/SmartDoge/cosmos-sdk/types"
-	banktypes "github.com/SmartDoge/cosmos-sdk/x/bank/types"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )
 

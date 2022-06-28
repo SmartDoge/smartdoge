@@ -7,13 +7,13 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/SmartDoge/smartdoge/rpc/types"
 	"github.com/SmartDoge/cosmos-sdk/client/flags"
 	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
 	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
+	"github.com/SmartDoge/smartdoge/rpc/types"
 
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 
 	// . "github.com/onsi/ginkgo/v2"
 	// . "github.com/onsi/gomega"

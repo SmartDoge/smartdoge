@@ -9,11 +9,11 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
-	"github.com/SmartDoge/smartdoge/tests"
 	"github.com/SmartDoge/cosmos-sdk/client"
 	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
+	"github.com/SmartDoge/smartdoge/tests"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"

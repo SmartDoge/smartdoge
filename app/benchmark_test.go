@@ -5,8 +5,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/SmartDoge/smartdoge/encoding"
 	"github.com/SmartDoge/cosmos-sdk/simapp"
+	"github.com/SmartDoge/smartdoge/encoding"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"

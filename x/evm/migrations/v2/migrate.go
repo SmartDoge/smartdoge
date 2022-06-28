@@ -1,9 +1,9 @@
 package v2
 
 import (
-	"github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	paramtypes "github.com/SmartDoge/cosmos-sdk/x/params/types"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // MigrateStore add the default RejectUnprotected parameter.

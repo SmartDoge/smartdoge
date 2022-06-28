@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/SmartDoge/smartdoge/x/evm/types"
 	amino "github.com/SmartDoge/cosmos-sdk/codec"
 	simtypes "github.com/SmartDoge/cosmos-sdk/types/simulation"
 	"github.com/SmartDoge/cosmos-sdk/x/simulation"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // ParamChanges defines the parameters that can be modified by param change proposals

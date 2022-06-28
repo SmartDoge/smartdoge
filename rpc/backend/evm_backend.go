@@ -26,10 +26,10 @@ import (
 	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
 	grpctypes "github.com/SmartDoge/cosmos-sdk/types/grpc"
 
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 	"github.com/SmartDoge/smartdoge/rpc/types"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 )
 
 var bAttributeKeyEthereumBloom = []byte(evmtypes.AttributeKeyEthereumBloom)

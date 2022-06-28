@@ -10,9 +10,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/tendermint/tendermint/libs/cli"
 
+	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 	clientkeys "github.com/SmartDoge/smartdoge/client/keys"
 	"github.com/SmartDoge/smartdoge/crypto/hd"
-	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 )
 
 // KeyCommands registers a sub-tree of commands to interact with

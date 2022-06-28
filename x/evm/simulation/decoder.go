@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/SmartDoge/cosmos-sdk/types/kv"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 )
 

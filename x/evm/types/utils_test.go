@@ -5,12 +5,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/SmartDoge/smartdoge/app"
-	"github.com/SmartDoge/smartdoge/encoding"
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/SmartDoge/cosmos-sdk/client"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
+	"github.com/SmartDoge/smartdoge/app"
+	"github.com/SmartDoge/smartdoge/encoding"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	proto "github.com/gogo/protobuf/proto"
 
 	"github.com/stretchr/testify/require"

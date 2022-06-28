@@ -3,8 +3,8 @@ package types
 import (
 	"math/big"
 
-	"github.com/SmartDoge/smartdoge/types"
 	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	"github.com/SmartDoge/smartdoge/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )

@@ -9,10 +9,10 @@ import (
 	tmbytes "github.com/tendermint/tendermint/libs/bytes"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/armon/go-metrics"
 	"github.com/SmartDoge/cosmos-sdk/telemetry"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	"github.com/armon/go-metrics"
 
 	"github.com/SmartDoge/smartdoge/x/evm/types"
 )

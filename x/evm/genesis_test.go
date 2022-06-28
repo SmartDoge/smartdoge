@@ -5,11 +5,11 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
+	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/SmartDoge/smartdoge/x/evm"
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 	"github.com/SmartDoge/smartdoge/x/evm/types"
-	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 )
 
 func (suite *EvmTestSuite) TestInitGenesis() {

@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/SmartDoge/smartdoge/tests"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	"github.com/SmartDoge/smartdoge/tests"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/suite"

@@ -7,9 +7,9 @@ import (
 	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 	stakingtypes "github.com/SmartDoge/cosmos-sdk/x/staking/types"
 
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 )
 
 // AccountKeeper defines the expected account keeper interface

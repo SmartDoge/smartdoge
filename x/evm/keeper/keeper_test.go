@@ -20,8 +20,8 @@ import (
 	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 	banktypes "github.com/SmartDoge/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/SmartDoge/cosmos-sdk/x/staking/types"
-	tmjson "github.com/tendermint/tendermint/libs/json"
 	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
+	tmjson "github.com/tendermint/tendermint/libs/json"
 
 	"github.com/SmartDoge/smartdoge/app"
 	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"

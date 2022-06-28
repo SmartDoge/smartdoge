@@ -16,8 +16,8 @@ import (
 	"github.com/SmartDoge/cosmos-sdk/types/rest"
 	authrest "github.com/SmartDoge/cosmos-sdk/x/auth/client/rest"
 
-	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
 	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
+	rpctypes "github.com/SmartDoge/smartdoge/rpc/types"
 
 	"github.com/ethereum/go-ethereum/common"
 )

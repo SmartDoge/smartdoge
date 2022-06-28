@@ -16,10 +16,10 @@ import (
 	smartdoge "github.com/SmartDoge/smartdoge/types"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 
-	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/SmartDoge/cosmos-sdk/crypto/keys/ed25519"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	simtypes "github.com/SmartDoge/cosmos-sdk/types/simulation"
+	"github.com/SmartDoge/smartdoge/crypto/ethsecp256k1"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	abci "github.com/tendermint/tendermint/abci/types"

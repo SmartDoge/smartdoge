@@ -55,10 +55,10 @@ else
 fi
 
 # Add a genesis account with the amount of staked currency and the amount of wallet currency
-smartdoged add-genesis-account $(smartdoged keys show $KEY -a) 1000000000000000000000000wei # 1 million SDOGE
+smartdoged add-genesis-account $(smartdoged keys show $KEY -a) 1000000000000000000000000000wei # 1 billion SDOGE
 
 # Create the genesis transaction to stake
-smartdoged gentx $KEY 100000000000000000000000wei --chain-id $CHAINID # Stake 100k SDOGE
+smartdoged gentx $KEY 100000000000000000000000000wei --chain-id $CHAINID # Stake 100 million SDOGE
 
 # Collect all genesis transactions into the genesis.json config
 smartdoged collect-gentxs

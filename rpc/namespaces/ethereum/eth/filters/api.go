@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/SmartDoge/smartdoge/rpc/types"
 	"github.com/SmartDoge/cosmos-sdk/client"
+	"github.com/SmartDoge/smartdoge/rpc/types"
 
 	"github.com/tendermint/tendermint/libs/log"
 

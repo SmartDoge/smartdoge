@@ -12,8 +12,8 @@ import (
 	"github.com/SmartDoge/cosmos-sdk/client"
 	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
 
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"

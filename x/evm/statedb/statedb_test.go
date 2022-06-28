@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"

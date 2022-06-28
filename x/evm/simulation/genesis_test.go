@@ -7,12 +7,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/SmartDoge/smartdoge/x/evm/simulation"
-	"github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/SmartDoge/cosmos-sdk/codec"
 	codectypes "github.com/SmartDoge/cosmos-sdk/codec/types"
 	"github.com/SmartDoge/cosmos-sdk/types/module"
 	simtypes "github.com/SmartDoge/cosmos-sdk/types/simulation"
+	"github.com/SmartDoge/smartdoge/x/evm/simulation"
+	"github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // TestRandomizedGenState tests the normal scenario of applying RandomizedGenState.

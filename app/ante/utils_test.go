@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/SmartDoge/smartdoge/ethereum/eip712"
-	"github.com/SmartDoge/smartdoge/types"
 	"github.com/SmartDoge/cosmos-sdk/codec"
 	"github.com/SmartDoge/cosmos-sdk/x/auth/legacy/legacytx"
 	types2 "github.com/SmartDoge/cosmos-sdk/x/bank/types"
 	types3 "github.com/SmartDoge/cosmos-sdk/x/staking/types"
+	"github.com/SmartDoge/smartdoge/ethereum/eip712"
+	"github.com/SmartDoge/smartdoge/types"
 	"github.com/ethereum/go-ethereum/crypto"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -31,13 +31,13 @@ import (
 	authtx "github.com/SmartDoge/cosmos-sdk/x/auth/tx"
 	authtypes "github.com/SmartDoge/cosmos-sdk/x/auth/types"
 
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 	"github.com/SmartDoge/smartdoge/app"
 	ante "github.com/SmartDoge/smartdoge/app/ante"
 	"github.com/SmartDoge/smartdoge/encoding"
 	"github.com/SmartDoge/smartdoge/tests"
 	"github.com/SmartDoge/smartdoge/x/evm/statedb"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

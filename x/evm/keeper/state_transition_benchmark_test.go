@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"testing"
 
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/SmartDoge/cosmos-sdk/crypto/keyring"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"

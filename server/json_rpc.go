@@ -7,10 +7,10 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 
-	"github.com/SmartDoge/smartdoge/rpc"
 	"github.com/SmartDoge/cosmos-sdk/client"
 	"github.com/SmartDoge/cosmos-sdk/server"
 	"github.com/SmartDoge/cosmos-sdk/server/types"
+	"github.com/SmartDoge/smartdoge/rpc"
 	ethlog "github.com/ethereum/go-ethereum/log"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
 

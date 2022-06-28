@@ -96,6 +96,9 @@ import (
 	// unnamed import of statik for swagger UI support
 	_ "github.com/SmartDoge/smartdoge/client/docs/statik"
 
+	"github.com/SmartDoge/ethermint/x/feemarket"
+	feemarketkeeper "github.com/SmartDoge/ethermint/x/feemarket/keeper"
+	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 	"github.com/SmartDoge/smartdoge/app/ante"
 	srvflags "github.com/SmartDoge/smartdoge/server/flags"
 	smartdoge "github.com/SmartDoge/smartdoge/types"
@@ -103,9 +106,6 @@ import (
 	evmrest "github.com/SmartDoge/smartdoge/x/evm/client/rest"
 	evmkeeper "github.com/SmartDoge/smartdoge/x/evm/keeper"
 	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
-	"github.com/SmartDoge/ethermint/x/feemarket"
-	feemarketkeeper "github.com/SmartDoge/ethermint/x/feemarket/keeper"
-	feemarkettypes "github.com/SmartDoge/ethermint/x/feemarket/types"
 
 	// Force-load the tracer engines to trigger registration due to Go-Ethereum v1.10.15 changes
 	_ "github.com/ethereum/go-ethereum/eth/tracers/js"
@@ -165,7 +165,7 @@ var (
 		feegrantmodule.AppModuleBasic{},
 		// Allows the definition of a block height at which a node must upgrade to a new version before continuing.
 		upgrade.AppModuleBasic{},
-		// Provides data structures for users to submit arbitrary evidence of misbehaviour.
+		// Provides data structures for users to submit arbitrary evidence of misbehavior.
 		evidence.AppModuleBasic{},
 		// Appears to be related to IBC and was extracted from the IBC module for cleanliness: https://github.com/SmartDoge/cosmos-sdk/issues/6092
 		transfer.AppModuleBasic{},

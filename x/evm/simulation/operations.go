@@ -20,13 +20,13 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
+	"github.com/SmartDoge/cosmos-sdk/client"
+	cryptotypes "github.com/SmartDoge/cosmos-sdk/crypto/types"
+	"github.com/SmartDoge/cosmos-sdk/x/auth/signing"
 	"github.com/SmartDoge/smartdoge/encoding"
 	"github.com/SmartDoge/smartdoge/tests"
 	"github.com/SmartDoge/smartdoge/x/evm/keeper"
 	"github.com/SmartDoge/smartdoge/x/evm/types"
-	"github.com/SmartDoge/cosmos-sdk/client"
-	cryptotypes "github.com/SmartDoge/cosmos-sdk/crypto/types"
-	"github.com/SmartDoge/cosmos-sdk/x/auth/signing"
 	"github.com/ethereum/go-ethereum/crypto"
 )
 

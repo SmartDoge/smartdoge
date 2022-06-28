@@ -1,9 +1,9 @@
 package ante
 
 import (
-	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 	sdk "github.com/SmartDoge/cosmos-sdk/types"
 	sdkerrors "github.com/SmartDoge/cosmos-sdk/types/errors"
+	evmtypes "github.com/SmartDoge/smartdoge/x/evm/types"
 )
 
 // RejectMessagesDecorator prevents invalid msg types from being executed
