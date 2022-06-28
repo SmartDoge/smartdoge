@@ -7,6 +7,9 @@ CHAINID=smartdoge_31337-1
 # Determines where created keys are stored. "test" stores in an unencrypted file in the home directory. Do not use outside of localnet!
 KEYRING=test
 
+# Build the latest version of the node
+make install
+
 # Init the node with default config
 smartdoged init $MONIKER --chain-id=$CHAINID
 
@@ -49,9 +52,9 @@ fi
 
 # Enable JSON-RPC namespaces
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    sed -i '' 's/api = "eth,net,web3"/api = "eth,txpool,personal,net,debug,web3,miner"/g' $HOME/.smartdoged/config/app.toml
+    sed -i '' 's/api = "eth,net,web3"/api = "eth,net,web3,txpool,debug,personal,miner"/g' $HOME/.smartdoged/config/app.toml
 else
-    sed -i 's/api = "eth,net,web3"/api = "eth,txpool,personal,net,debug,web3,miner"/g' $HOME/.smartdoged/config/app.toml
+    sed -i 's/api = "eth,net,web3"/api = "eth,net,web3,txpool,debug,personal,miner"/g' $HOME/.smartdoged/config/app.toml
 fi
 
 # Add a genesis account with the amount of staked currency and the amount of wallet currency

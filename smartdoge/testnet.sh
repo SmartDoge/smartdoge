@@ -34,7 +34,7 @@ fi
 # Validatate genesis.json
 smartdoged validate-genesis
 
-# TODO: Add "seeds" and "persistent-peers" to config.toml
+# TODO: Add "seeds" and "persistent-peers" to config.toml. Peer format is <Node ID>@<IP>:<P2P port, typically 26656>.
 
 # Run the node
 smartdoged start

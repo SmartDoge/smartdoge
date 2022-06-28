@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2022-06-21T19:54:23.578918534Z",
+  "genesis_time": "2022-06-28T16:50:05.009295165Z",
   "chain_id": "smartdoge_42069-1",
   "initial_height": "1",
   "consensus_params": {
@@ -57,7 +57,7 @@
           "coins": [
             {
               "denom": "wei",
-              "amount": "1000000000000000000000000"
+              "amount": "1000000000000000000000000000"
             }
           ]
         }
@@ -65,7 +65,7 @@
       "supply": [
         {
           "denom": "wei",
-          "amount": "1000000000000000000000000"
+          "amount": "1000000000000000000000000000"
         }
       ],
       "denom_metadata": []
@@ -169,15 +169,15 @@
                 "validator_address": "ethmvaloper1n7ldtmzde54l58w47xl6x7e2elkrlfjsjfr438",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "4kUGpJZCgnwwyZ1uYmLfmiYgPxdnOyC/Dky4CfMDflc="
+                  "key": "pOv/b9UW48Fa4RB6dnr4efulYoJ5vlPq7rvY1lMGLLQ="
                 },
                 "value": {
                   "denom": "wei",
-                  "amount": "100000000000000000000000"
+                  "amount": "100000000000000000000000000"
                 }
               }
             ],
-            "memo": "aef668571146a4cf35d85cb8c3ed5ac9397e6f6b@10.0.0.4:26656",
+            "memo": "e5b9ad0d6857bd7402b9bf45f05c17bd1dedb5cc@10.0.0.4:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -205,7 +205,7 @@
             }
           },
           "signatures": [
-            "YWAGSLxPqJvgOaUV1wETIIgtRh3/q8koDsmPYRhiUHANDRjQNhWVDiD2oNvuNEO0KDaas/qcXLojiWhk3m5QrAA="
+            "wwIug3cWCWhBdcH06ctnXstKlAVvtl2fkLJDVlkpPGRWcNhK8cav3ZMXW/OW/h432hOsz4fdYJ6JyFs8lkQIMwA="
           ]
         }
       ]
