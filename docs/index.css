@@ -142,6 +142,45 @@ body {
     animation-iteration-count: infinite;
 }
 
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+.rocket-text>span {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+}
+
+.rocket-text>span:nth-child(1) {
+    left: -50px;
+}
+
+.rocket-text>span:nth-child(2) {
+    left: 300px;
+}
+
+.rocket-text>span:nth-child(3) {
+    left: -90px;
+}
+
+.rocket-text>span:nth-child(4) {
+    right: 40px;
+}
+
+.rocket-text>span:nth-child(5) {
+    right: 150px;
+}
+
 .main-card-row {
     margin-top: -72px
 }
