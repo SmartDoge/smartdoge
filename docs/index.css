@@ -57,9 +57,9 @@
 html {
     --accent-1: rgb(0, 137, 234);
     --accent-2: rgb(255, 0, 255);
-    --title-font: "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, Arial, sans-serif;
+    --title-font: "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, Chilanka, Arial, sans-serif;
     --content-font: Arial, sans-serif;
-    background-image: url("assets/Background-Space.jpg");
+    background-image: url("assets/Background-Space-2.jpg");
     background-repeat: repeat;
     background-color: #010847;
 }
@@ -83,6 +83,10 @@ body {
     font-weight: bold;
 }
 
+.title-text {
+    font-size: 48px;
+}
+
 .navbar-nav li {
     margin-left: 8px;
 }
@@ -100,7 +104,11 @@ body {
 }
 
 .header-comets {
-    position: relative;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 100%;
 }
 
 .header-comets>img {
@@ -155,6 +163,10 @@ body {
         0 0 151px #0fa;
 }
 
+.rocket-text {
+    display: none;
+}
+
 .rocket-text>span {
     position: absolute;
     color: white;
@@ -185,10 +197,16 @@ body {
     margin-top: -72px
 }
 
-.main-card-row>div {
-    background-image: url("assets/Doge-Geek.jpg");
-    background-size: 50%;
-    background-repeat: no-repeat;
+@media (min-width: 768px) {
+    .doge-geek {
+        border-radius: 12px 0 0 12px !important;
+    }
+}
+
+.doge-geek {
+    margin-left: -12px;
+    border-radius: 12px;
+    width: calc(100% + 24px);
 }
 
 .distribution-container-inner>.row {
@@ -201,6 +219,7 @@ body {
 
 .burn-container {
     background-image: url("assets/Doge-Burn-Background-DESKTOP.jpg");
+    background-size: cover;
 }
 
 .join-row>div {
