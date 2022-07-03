@@ -57,8 +57,6 @@
 html {
     --accent-1: rgb(0, 137, 234);
     --accent-2: rgb(255, 0, 255);
-    --title-font: "Comic Sans MS", "Comic Sans", "Chalkboard SE", Chalkboard, Arial, sans-serif;
-    --content-font: Arial, sans-serif;
     background-image: url("assets/Background-Space.jpg");
     background-repeat: repeat;
     background-color: #010847;
