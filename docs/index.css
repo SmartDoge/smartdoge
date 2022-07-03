@@ -160,6 +160,7 @@ body {
 
 .burn-container {
     background-image: url("assets/Doge-Burn-Background-DESKTOP.jpg");
+    background-size: cover;
 }
 
 .join-row>div {
